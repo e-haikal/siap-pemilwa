@@ -39,4 +39,4 @@ Password: user
 ```
 
 
-Jika ada masukan untuk project ini silahkan gunakan fitur issues di github.# web-pemilihan-mahasiswa
+Jika ada masukan untuk project ini silahkan gunakan fitur issues di github.
