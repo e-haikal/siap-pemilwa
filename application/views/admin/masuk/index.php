@@ -15,6 +15,30 @@
     .logo h1 {
       font-family: 'Montserrat', sans-serif;
     }
+
+    .logo {
+      text-align: center;
+    }
+
+    .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+    }
+
+    /* Tambahkan gaya untuk mobile */
+    @media (max-width: 768px) {
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .logo-text {
+        margin: auto;
+        /* Ini akan membuat teks tetap di tengah secara horizontal */
+      }
+    }
   </style>
   <!-- ... (kode setelahnya) ... -->
 
@@ -44,7 +68,7 @@
         <?php
         }
         ?>
-        <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Login</h3>
+        <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Admin</h3>
         <div class="form-group">
           <label class="control-label">USERNAME</label>
           <input class="form-control" name="username" type="text" placeholder="Username" autofocus>
