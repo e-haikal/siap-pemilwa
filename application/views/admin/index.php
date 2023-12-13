@@ -22,6 +22,27 @@
   <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/main.css'); ?>">
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Gaya Hover untuk Seluruh Card */
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Gaya Hover untuk Gambar */
+    .card .card-body img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover .card-body img {
+      transform: scale(1.1);
+    }
+  </style>
+
 </head>
 
 <body class="app sidebar-mini">
