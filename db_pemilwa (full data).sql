@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2023 at 01:27 AM
+-- Generation Time: Dec 17, 2023 at 11:52 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -39,8 +39,8 @@ CREATE TABLE `kandidat` (
 --
 
 INSERT INTO `kandidat` (`id_kandidat`, `nama_kandidat`, `nomor_kandidat`, `foto_kandidat`) VALUES
-(13, 'Farista - Panji', '1', '1.png'),
-(14, 'Billy - Guntur', '2', '2.png');
+(13, 'Farista - Panji', '1', 'kandidat-11.png'),
+(14, 'Billy - Guntur', '2', 'kandidat-21.png');
 
 -- --------------------------------------------------------
 
@@ -61,124 +61,146 @@ CREATE TABLE `pemilih` (
 --
 
 INSERT INTO `pemilih` (`id_pemilih`, `nama_pemilih`, `jk_pemilih`, `username`, `password`) VALUES
-(1, 'Basrian Burhan Utomo', 'laki-laki', 'basrian', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(2, 'Aulia Putri Firdhausya', 'perempuan', 'aulia', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(3, 'Yofran', 'laki-laki', 'yofran', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(4, 'DEWI AYU MURTININGSIH', 'perempuan', 'dewi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(5, 'MUHAMMAD RISDIANSYAH', 'laki-laki', 'muhammad', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(6, 'SYIFA SALSABILA', 'perempuan', 'syifa', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(7, 'MUHAMMAD DAFFA ARDIANSYAH', 'laki-laki', 'muhammad1', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(8, 'DAMAR ADI NUGROHO', 'laki-laki', 'damar', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(9, 'Ganti Ananda', 'laki-laki', 'ganti', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(10, 'Bima Batara Indra Sakti Laudy', 'laki-laki', 'bima', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(11, 'GERI MAPAN SINAMBELA', 'laki-laki', 'geri', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(12, 'Yunita Ture', 'perempuan', 'yunita', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(13, 'RIFKI TRIWIJAYA', 'laki-laki', 'rifki', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(14, 'RAGIL FRANSISKO OLA HAYON', 'laki-laki', 'ragil', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(15, 'NIKSON BARNABAS ALEANDRO BAAY', 'laki-laki', 'nikson', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(16, 'RAHARDYANDRA NAUFAL EFFENDY PRATAMA', 'laki-laki', 'rahardyandra', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(17, 'ALFINA NUR HALIZA', 'perempuan', 'alfina', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(18, 'ALICA MARSA MALIHAH WIDIGDO', 'perempuan', 'alica', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(19, 'FAUZI IKHSAN NOVANTO', 'laki-laki', 'fauzi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(20, 'ABIDAH RAHMI', 'perempuan', 'abidah', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(21, 'Wahyu Adi Giantoro', 'laki-laki', 'wahyu', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(22, 'ADI NUGROHO', 'laki-laki', 'adi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(23, 'AGUSTINUS LAUIS LUNG', 'laki-laki', 'agustinus', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(24, 'AHMAD ALDIYANTO', 'laki-laki', 'ahmad', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(25, 'ALAM MISBAKHU RIZQON', 'laki-laki', 'alam', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(26, 'ALDI SOFIAN AHMAD', 'laki-laki', 'aldi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(27, 'Alfandi Wicaksono', 'laki-laki', 'alfandi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(28, 'ALWAYS MUHAMMAD REZA YUDA PRATAMA', 'laki-laki', 'always', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(29, 'EFFIE AMALIA', 'perempuan', 'effie', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(30, 'AMRULLAH AGUNG PRASETYA', 'laki-laki', 'amrullah', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(31, 'APRIAN KHAERUL', 'laki-laki', 'aprian', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(32, 'Muh Arief Refadilla', 'laki-laki', 'arief', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(33, 'ARIF ZAELANI', 'laki-laki', 'arif', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(34, 'ASTHIVIA OKTANDA AMITABA', 'laki-laki', 'asthivia', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(35, 'Muhammad Asyrov Illahi', 'laki-laki', 'muhammad', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(36, 'AULIA NOER HIQMAH', 'perempuan', 'aulia', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(37, 'BAGUS EKO NUGROHO', 'laki-laki', 'bagus', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(38, 'candra meyhuda ifnu', 'laki-laki', 'candra', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(39, 'Gerald Dzulfiqar', 'laki-laki', 'gerald', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(40, 'Faiq Muztaba', 'laki-laki', 'faiq', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(41, 'FANGGI ANDRIAN', 'laki-laki', 'fanggi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(42, 'Farrel Faustilla', 'laki-laki', 'farrel', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(43, 'Ammar Fayyadh Mujahid', 'laki-laki', 'ammar', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(44, 'GIDEON EKA KURNIAWAN', 'laki-laki', 'gideon', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(45, 'GILANG ARYA TAMA', 'laki-laki', 'gilang', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(46, 'Muhammad Hammam', 'laki-laki', 'muhammad', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(47, 'MUHAMMAD NATIVE MUTTAQIEN KURNIADI', 'laki-laki', 'muhammad', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(48, 'NAJMAH NUR WAFIYAH', 'perempuan', 'najmah', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(49, 'Indrati Nur Aisyah Wuryantari', 'perempuan', 'indrati', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(50, 'NURI HERY PRATAMA', 'laki-laki', 'nuri', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(51, 'QADAR SADLY SAPUTRA', 'laki-laki', 'qadar', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(52, 'Radinka Syahputra', 'laki-laki', 'radinka', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(53, 'Ragil Haryo Sadewo', 'laki-laki', 'ragil', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(54, 'Ray Febrian Tomasila', 'laki-laki', 'ray', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(55, 'Rifqi ikbar wahyono', 'laki-laki', 'rifqi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(56, 'RIO RADITYA BAGAS INDRAJATI', 'laki-laki', 'rio', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(57, 'Sulton Bani Laju', 'laki-laki', 'sulton', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(58, 'SUTRISNO', 'laki-laki', 'sutrisno', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(59, 'WAKHID PRAMADYA PUTRA', 'laki-laki', 'wakhid', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(60, 'WIRA PRADINA RESTI', 'laki-laki', 'wira', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(61, 'ZAIDAN RAFIF SYAUQI', 'laki-laki', 'zaidan', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(62, 'VIRNA SENTIA', 'perempuan', 'virna', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(63, 'Wahyu Muhammad Arby', 'laki-laki', 'wahyu', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(64, 'ZAKKA LAZUARDI ZULKARNAIN', 'laki-laki', 'zakka', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(65, 'MUHAMMAD AMIKATUZZAIN', 'laki-laki', 'muhammad', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(66, 'SHINDY NANDITA RAY', 'perempuan', 'shindy', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(67, 'FIQI BAINA ASHHAB', 'laki-laki', 'fiqi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(68, 'ZULAFAN FADHLAN WIDADI', 'laki-laki', 'zulafan', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(69, 'IVANALIE GRETZA CRISANEA', 'perempuan', 'ivanalie', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(70, 'Aditama Suryaprayoga', 'laki-laki', 'aditama', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(71, 'DZAKY HAMID AL AZIZ', 'laki-laki', 'dzaky', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(72, 'AFRIAN DICKY PRASETYA', 'laki-laki', 'afrian', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(73, 'Tanujaya Chandra Setyawan', 'laki-laki', 'tanujaya', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(74, 'Alya Wahyuning Syahbani', 'perempuan', 'alya', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(75, 'Rizka Amelia Sari', 'perempuan', 'rizka', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(76, 'Adit Musafa', 'laki-laki', 'aditmusafa', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(77, 'Rivaldo Fajar Ramadhan', 'laki-laki', 'rivaldo', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(78, 'Reiza_2569', 'laki-laki', 'reiza_2569', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(79, 'Rangga Viarta', 'laki-laki', 'rangga', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(80, 'ABDUL HAJATUN RAMADHANI', 'perempuan', 'abdulhajatun', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(81, 'Anggi Nur Khasnah', 'perempuan', 'anggi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(82, 'TERRY ADAM YUDISTIRA SULISTIONO', 'laki-laki', 'terryadam', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(83, 'MICHAEL TINO', 'laki-laki', 'michaeltino', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(84, 'VALENSI SURYA PERMANA', 'laki-laki', 'valensi', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(85, 'ABIMANYU PRIMARENDRA', 'laki-laki', 'abimanyu', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(86, 'ACHMAD LUHUR RAYYA AL IRKHAS', 'laki-laki', 'achmadluhur', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(87, 'ADHIKA DWIKI SEPTIAN', 'laki-laki', 'adhika', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(88, 'ALFIAN RAMADHAN', 'laki-laki', 'alfian', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(89, 'ALIFA MURTIYANTO', 'laki-laki', 'alifa', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(90, 'Lukman Hakim Aljihadu', 'laki-laki', 'lukmanhakim', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(91, 'Muchamad Sanaya Almatin', 'laki-laki', 'sanaya', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(92, 'Bintang Kresna A', 'laki-laki', 'bintang', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(93, 'ELISABETH', 'perempuan', 'elisabeth', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(94, 'NAJWA FAUZIATUN NISA', 'perempuan', 'najwa', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(95, 'Wahyu Ferdiansyah', 'laki-laki', 'wahyuf', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(96, 'Septia Fajar Isnaini', 'perempuan', 'septia', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(97, 'Kamilaturrahmah MD', 'perempuan', 'kamilaturrahmah', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(98, 'LATIF ARDIANSYAH', 'laki-laki', 'latif', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(99, 'LILIANA PUTRI APARICIO', 'perempuan', 'liliana', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(100, 'MAHBUB FAISAL RACHMAN', 'laki-laki', 'mahbub', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(101, 'Marta Herlinda', 'perempuan', 'marta', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(102, 'MARVELIN GARETH HENDARGA', 'laki-laki', 'marvelin', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(103, 'Michel', 'laki-laki', 'michel', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(104, 'MIFTA AULIA', 'perempuan', 'mifta', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(105, 'MUHAMAD PATIH HIDAYAT', 'laki-laki', 'muhammadpatih', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(106, 'Nanda', 'laki-laki', 'nanda', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(107, 'EFRIZAL RAHMAT NAUFAL', 'laki-laki', 'efrizal', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(108, 'HESTI NAWANG WULAN', 'perempuan', 'hesti', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(109, 'Fiki Pratama', 'laki-laki', 'fiki', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(110, 'YULVIANI PUTERI PUSPITA SARI', 'perempuan', 'yulviani', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(111, 'BAHTIAR RAHMAN', 'laki-laki', 'bahtiar', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(112, 'REALINO PRIMANDA PRASANO', 'laki-laki', 'realino', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(113, 'Reyhan Allofadieka', 'laki-laki', 'reyhan', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(114, 'Sabib Prastio', 'laki-laki', 'sabib', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(115, 'FAIZ MUHAMMAD SYAFNI RAKHMAN', 'laki-laki', 'faiz', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(116, 'Tasya Eklesya Suboong', 'perempuan', 'tasya', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(117, 'Dirna Akira', 'Perempuan', 'dirna', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(118, 'User', 'Laki-Laki', 'user', 'ee11cbb19052e40b07aac0ca060c23ee');
+(1, 'Ade Febrian', 'Laki-Laki', '20.11.3793', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(2, 'Anas Fikri Hanif', 'Laki-Laki', '20.11.3743', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(3, 'Andi Muhammad Ichsan Jalaluddin', 'Laki-Laki', '20.83.0545', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(4, 'Arifin Yunianta', 'Laki-Laki', '20.11.3763', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(5, 'Dian Prasetya', 'Laki-Laki', '21.83.0712', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(6, 'Dimas Fajar Nugroho', 'Laki-Laki', '20.11.3398', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(7, 'Eldiva Tegar Imananda', 'Laki-Laki', '20.83.0474', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(8, 'Ema Devani Putri', 'Perempuan', '20.11.3663', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(9, 'Indra Bagas Pratama', 'Laki-Laki', '22.83.0859', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(10, 'Jhingga Mahadhni', 'Laki-Laki', '21.83.0742', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(11, 'Ken Diani Mutia Sari', 'Perempuan', '20.11.3736', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(12, 'Krisna Aditya Pratama', 'Laki-Laki', '20.11.3648', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(13, 'Ma\'mur Zaky Nurrokhman', 'Laki-Laki', '20.11.3791', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(14, 'Mahesa Putra Bascoro Cahyo Ramadhan', 'Laki-Laki', '19.11.2900', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(15, 'Muhammad Dava Ramadhana', 'Laki-Laki', '21.83.0597', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(16, 'Muhammad Mufti Ashshiddiqi', 'Laki-Laki', '20.11.3386', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(17, 'Ravenusa Arjuna Kristiary', 'Laki-Laki', '20.11.3623', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(18, 'Rendra Baskoro Tuharea', 'Laki-Laki', '20.11.3683', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(19, 'Ridha Nurrachmat', 'Laki-Laki', '22.83.0857', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(20, 'Rina Setiani', 'Perempuan', '20.83.0533', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(21, 'Risang Bhisma Prabancana Putra', 'Laki-Laki', '20.11.3400', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(22, 'Senli Yusdiantoro', 'Laki-Laki', '20.11.3367', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(23, 'Achmad Dwi Agung Riyanto', 'Laki-Laki', '19.82.0566', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(24, 'Adinda Putri Nabilla Fernanda', 'Perempuan', '20.60.0115', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(25, 'Ahmad Bagas Irawan', 'Laki-Laki', '19.82.0580', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(26, 'Dimas Maulana R', 'Laki-Laki', '19.82.0686', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(27, 'Eddymas Pandu Prasetyo', 'Laki-Laki', '19.82.0821', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(28, 'Fairuzia Naufalnur Theananda', 'Perempuan', '19.82.0651', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(29, 'Fairyz Bintang Putra', 'Laki-Laki', '19.82.0715', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(30, 'Gracia Cecilia Olga', 'Perempuan', '22.60.0146', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(31, 'Lintang Sekar Langit', 'Perempuan', '19.82.0597', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(32, 'Mikhael Aji Prasaka', 'Laki-Laki', '18.12.0960', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(33, 'Mokh. Farid Al Ikhsan', 'Laki-Laki', '19.82.0626', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(34, 'Muhammad Haikkal Firman Arista', 'Laki-Laki', '22.82.1518', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(35, 'Pandu Wiratama Cakra Nugraha', 'Laki-Laki', '19.60.0063', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(36, 'Purwandito Pangestu', 'Laki-Laki', '19.82.0541', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(37, 'Rafi Ardiansyah', 'Laki-Laki', '19.82.0798', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(38, 'Ramandito Lutesendra Hatmanda', 'Laki-Laki', '22.82.1523', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(39, 'Thoriq Daffa Fakhrurrozi', 'Laki-Laki', '19.82.0810', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(40, 'Yohan Arif Satria', 'Laki-Laki', '20.84.0273', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(41, 'Abraham Nemangkawi Sinaga', 'Laki-Laki', '21.61.0217', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(42, 'Agil Pamungkas', 'Laki-Laki', '21.92.0396', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(43, 'Anggista Oktavia Praneswara', 'Perempuan', '20.11.3690', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(44, 'Aziz Setiawan', 'Laki-Laki', '21.01.4716', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(45, 'Chamdan Chaqul Mukti', 'Laki-Laki', '20.11.3713', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(46, 'CHANDRA ZOFA', 'Laki-Laki', '20.62.0164', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(47, 'Farhan Fathurroziq', 'Laki-Laki', '21.61.0213', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(48, 'Fauzan Baehaqi', 'Laki-Laki', '20.11.3727', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(49, 'Firman Almadhani Kurniawan', 'Laki-Laki', '20.11.3631', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(50, 'Gabriel Galang Restu Aji', 'Laki-Laki', '21.61.0222', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(51, 'Herly Chahya Putra', 'Laki-Laki', '21.01.4658', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(52, 'Herman Dwi Yulianto', 'Laki-Laki', '20.11.3731', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(53, 'Hilmi Arkaan Nurcahyo', 'Laki-Laki', '20.12.1813', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(54, 'I Putu Artoya', 'Laki-Laki', '20.12.1593', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(55, 'Mohammad Fathur Nur Kholis', 'Laki-Laki', '20.11.3730', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(56, 'Muhamad Ridho Budikusuma', 'Laki-Laki', '20.12.1609', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(57, 'Muhammad Fajar Ash Shiddiq', 'Laki-Laki', '21.61.0208', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(58, 'Petrus Padji Goran Lewogete', 'Laki-Laki', '21.61.0207', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(59, 'Rizqy Resha Prameswara', 'Laki-Laki', '21.61.0224', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(60, 'Septa Firdaus Adinata', 'Laki-Laki', '21.61.0219', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(61, 'Sindiani Kusumawardhani', 'Perempuan', '20.02.0603', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(62, 'Wahyu Aprilliandhika', 'Laki-Laki', '21.11.3869', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(63, 'Yanuar Ardhi Pratama', 'Laki-Laki', '21.01.4683', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(64, 'Adham Faraitodi', 'Laki-Laki', '21.12.2203', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(65, 'Adrian Wahyu Prasetya', 'Laki-Laki', '21.12.2202', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(66, 'Ahmad Almachzumi Rais Rasyiid', 'Laki-Laki', '21.12.2121', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(67, 'Ahmad Faqih Hidayat', 'Laki-Laki', '20.11.3603', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(68, 'Alfian Nur Hidayat', 'Laki-Laki', '20.02.0578', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(69, 'Asman Haikal', 'Laki-Laki', '23.22.2510', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(70, 'Candra Zofariansyah', 'Laki-Laki', '20.62.0164', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(71, 'Dava Akbar Maulana', 'Laki-Laki', '21.12.1998', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(72, 'David Diamanta', 'Laki-Laki', '20.12.1540', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(73, 'Deni Wijaya', 'Laki-Laki', '21.11.4511', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(74, 'Dhina Bastari Rochim', 'Laki-Laki', '21.12.2132', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(75, 'Difa Ayu Hespitasari', 'Perempuan', '21.12.2175', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(76, 'Dimas Rio Ikbar Fadholi', 'Laki-Laki', '20.11.3548', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(77, 'Ferry Febriansyah', 'Laki-Laki', '21.12.2249', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(78, 'Fikri Haris Saiful Wahab', 'Laki-Laki', '21.12.2040', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(79, 'Fikri Ikhsan Saputra', 'Laki-Laki', '21.12.2024', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(80, 'Gilang Ardhi Saputra', 'Laki-Laki', '21.11.4247', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(81, 'Hanny Olivia', 'Perempuan', '21.12.2005', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(82, 'Ibrahim Aji Fajar Romadhon', 'Laki-Laki', '21.12.2201', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(83, 'Ika Purwanti', 'Perempuan', '21.12.2138', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(84, 'Imel', 'Perempuan', '21.12.2182', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(85, 'Innaka Kubro Dani Istono', 'Laki-Laki', '20.62.0178', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(86, 'Malik Fajar', 'Laki-Laki', '21.12.1845', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(87, 'Megan Alvira Putri', 'Perempuan', '21.95.0330', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(88, 'Meisha Afifah Putri', 'Perempuan', '20.02.0592', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(89, 'Mitaful Yudha Pratama', 'Laki-Laki', '22.21.1567', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(90, 'Mufidatul Ngazizah', 'Perempuan', '21.83.0740', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(91, 'Muh Zaki Choiruddin', 'Laki-Laki', '20.01.4551', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(92, 'Muhammad Ammar Afif', 'Laki-Laki', '21.11.3927', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(93, 'Muhammad Ardho Mihada', 'Laki-Laki', '21.12.2045', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(94, 'Muhammad Mas\'ud Mahfudz Darmawan', 'Laki-Laki', '20.11.3502', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(95, 'Muhammad Rosyid Farachi', 'Laki-Laki', '20.62.0174', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(96, 'Nabilla Shalma Fajarani', 'Perempuan', '21.12.2152', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(97, 'Rifqi Padi Siliwangi', 'Laki-Laki', '19.12.1026', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(98, 'Rizky Oktafian Nur Muhammad', 'Laki-Laki', '20.01.4553', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(99, 'Rusdi Alamsyah', 'Laki-Laki', '20.11.3510', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(100, 'Suryo Anggito', 'Laki-Laki', '19.01.4356', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(101, 'Zulfa Fakaha', 'Laki-Laki', '21.11.4337', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(102, 'Bq Anisa Putrin Meilia', 'Perempuan', '22.86.0276', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(103, 'Muhammad Sigit Nugroho', 'Laki-Laki', '20.11.3329', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(104, 'Rangga Ramadhan', 'Laki-Laki', '20.83.0549', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(105, 'Achmad Muhaimin', 'Laki-Laki', '21.12.1870', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(106, 'Achmad Noor Seta', 'Laki-Laki', '21.12.1956', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(107, 'Arlin Sulistyo Priambodo', 'Laki-Laki', '21.12.2018', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(108, 'Daffa Pasya Al-Ghifary', 'Laki-Laki', '20.62.0176', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(109, 'Dennis Leonard', 'Laki-Laki', '21.12.1984', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(110, 'Diffran Nur Cahyo', 'Laki-Laki', '22.52.1254', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(111, 'Dimas Ibnu Ariyoso', 'Laki-Laki', '21.12.2163', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(112, 'Fintas Yulianti', 'Perempuan', '20.12.1803', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(113, 'Muhammad Rusdi Rahman', 'Laki-Laki', '22.51.1253', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(114, 'Niza Aidha Wardhani', 'Perempuan', '21.02.0711', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(115, 'Nurul Azizah', 'Perempuan', '21.02.0676', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(116, 'Queen Latifa Nafia', 'Perempuan', '21.12.1983', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(117, 'Rizki Darmawan', 'Laki-Laki', '21.12.2010', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(118, 'Rully Rizqullah Wirasti', 'Laki-Laki', '20.62.0167', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(119, 'Salma Khoirun nisa', 'Perempuan', '20.82.0860', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(120, 'Urai Filah Fadha', 'Perempuan', '21.12.2004', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(121, 'Vicky Hermansyah', 'Laki-Laki', '20.82.0856', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(122, 'Wahyu Nusantara', 'Laki-Laki', '20.82.0865', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(123, 'Yogatama Adiguna', 'Laki-Laki', '20.82.0876', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(124, 'Yuditiya Astri Kanira', 'Perempuan', '21.12.1910', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(125, 'Bambang Sugeng Marsudianto', 'Laki-Laki', '20.11.3732', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(126, 'Mashdarul Mawahib', 'Laki-Laki', '20.11.3699', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(127, 'Agies Sulthan Thoriq', 'Laki-Laki', '21.82.1143', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(128, 'Agustinus Arya Carlo Paninggih', 'Laki-Laki', '21.82.1129', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(129, 'Bondan Danang Prasetyo', 'Laki-Laki', '21.82.1140', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(130, 'Davinta Belladona Febrinasari', 'Perempuan', '20.60.0090', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(131, 'Farras Naufal', 'Laki-Laki', '21.82.1108', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(132, 'Fauzan Al Irsyadul Ikhbaad', 'Laki-Laki', '20.82.0991', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(133, 'Fikri Ediputra Cahyanto', 'Laki-Laki', '20.82.0840', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(134, 'M.Nur Rosyid Adi Saputra', 'Laki-Laki', '21.82.1127', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(135, 'Muh. Alex Saputra', 'Laki-Laki', '20.11.3567', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(136, 'Muhammad Nur Rosyid Adi Saputra', 'Laki-Laki', '21.82.1127', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(137, 'Tasliha Hilmina', 'Perempuan', '20.85.0123', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(138, 'Tegar Putra Brataditama', 'Laki-Laki', '21.82.1148', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(139, 'Tria Indah Lestari', 'Perempuan', '21.82.1080', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(140, 'Wibisono Wijaya', 'Laki-Laki', '21.82.1153', 'ee11cbb19052e40b07aac0ca060c23ee');
 
 -- --------------------------------------------------------
 
@@ -199,7 +221,7 @@ CREATE TABLE `petugas` (
 
 INSERT INTO `petugas` (`id_petugas`, `nama_petugas`, `username`, `password`) VALUES
 (4, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(10, 'haikal', 'haikal', 'a847b53f9999fc735ca2b6f1419c93d0');
+(11, 'Haikal', 'haikal', 'a847b53f9999fc735ca2b6f1419c93d0');
 
 -- --------------------------------------------------------
 
@@ -219,21 +241,9 @@ CREATE TABLE `pilih` (
 --
 
 INSERT INTO `pilih` (`id_pilih`, `id_kandidat`, `id_pemilih`, `tgl_rekam`) VALUES
-(236, 14, 1, '2023-12-10 20:21:40'),
-(237, 13, 2, '2023-12-10 20:22:30'),
-(238, 13, 3, '2023-12-10 20:23:09'),
-(239, 13, 4, '2023-12-10 20:23:37'),
-(240, 13, 5, '2023-12-10 20:23:56'),
-(241, 14, 6, '2023-12-10 20:24:16'),
-(242, 13, 7, '2023-12-10 20:25:14'),
-(243, 14, 8, '2023-12-10 20:25:31'),
-(244, 13, 9, '2023-12-10 20:25:50'),
-(245, 14, 10, '2023-12-10 20:26:07'),
-(246, 13, 11, '2023-12-10 20:26:33'),
-(247, 14, 12, '2023-12-10 20:27:00'),
-(248, 13, 13, '2023-12-10 20:27:15'),
-(249, 13, 14, '2023-12-11 06:36:05'),
-(250, 13, 15, '2023-12-11 07:25:53');
+(254, 13, 1, '2023-12-17 15:26:49'),
+(255, 13, 2, '2023-12-17 15:28:06'),
+(256, 14, 3, '2023-12-17 15:28:28');
 
 --
 -- Indexes for dumped tables
@@ -261,7 +271,9 @@ ALTER TABLE `petugas`
 -- Indexes for table `pilih`
 --
 ALTER TABLE `pilih`
-  ADD PRIMARY KEY (`id_pilih`);
+  ADD PRIMARY KEY (`id_pilih`),
+  ADD KEY `PILIH - KANDIDAT` (`id_kandidat`),
+  ADD KEY `PILIH - PEMILIH` (`id_pemilih`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -271,25 +283,36 @@ ALTER TABLE `pilih`
 -- AUTO_INCREMENT for table `kandidat`
 --
 ALTER TABLE `kandidat`
-  MODIFY `id_kandidat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_kandidat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `pemilih`
 --
 ALTER TABLE `pemilih`
-  MODIFY `id_pemilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id_pemilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pilih`
 --
 ALTER TABLE `pilih`
-  MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
+  MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=257;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `pilih`
+--
+ALTER TABLE `pilih`
+  ADD CONSTRAINT `PILIH - KANDIDAT` FOREIGN KEY (`id_kandidat`) REFERENCES `kandidat` (`id_kandidat`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `PILIH - PEMILIH` FOREIGN KEY (`id_pemilih`) REFERENCES `pemilih` (`id_pemilih`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

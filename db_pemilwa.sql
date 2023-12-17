@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2023 at 04:15 PM
+-- Generation Time: Dec 17, 2023 at 11:53 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -100,7 +100,9 @@ ALTER TABLE `petugas`
 -- Indexes for table `pilih`
 --
 ALTER TABLE `pilih`
-  ADD PRIMARY KEY (`id_pilih`);
+  ADD PRIMARY KEY (`id_pilih`),
+  ADD KEY `PILIH - KANDIDAT` (`id_kandidat`),
+  ADD KEY `PILIH - PEMILIH` (`id_pemilih`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -129,6 +131,17 @@ ALTER TABLE `petugas`
 --
 ALTER TABLE `pilih`
   MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `pilih`
+--
+ALTER TABLE `pilih`
+  ADD CONSTRAINT `PILIH - KANDIDAT` FOREIGN KEY (`id_kandidat`) REFERENCES `kandidat` (`id_kandidat`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `PILIH - PEMILIH` FOREIGN KEY (`id_pemilih`) REFERENCES `pemilih` (`id_pemilih`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
