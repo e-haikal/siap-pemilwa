@@ -14,7 +14,22 @@
 
 <body onload="window.print();">
     <div class="container py-5">
-        <h3 class="text-center">Laporan Data Petugas Pemilwa Amikom</h3>
+        <div class="row">
+            <div class="col-1 mt-1">
+                <img src="<?= base_url('assets/images/logo-amikom-warna.png'); ?>" alt="Logo" style="max-width: 200px; max-height: 60px;">
+            </div>
+            <div class="col-5 text-center">
+                <h3 class="display-5 mb-0">Laporan Data Petugas</h3>
+                <h3 class="display-5 mt-0">Pemilwa Amikom</h3>
+
+            </div>
+            <div class="col-5 text-right">
+                <h5 class="font-weight-medium mb-0 mt-2">KAMPUS TERPADU</h5>
+                <p class="small">Jl. Ring Road Utara, Condong Catur, Depok, Sleman<br>
+                    Telp. (0274)884201 - 206, Faks : (0274)884208</p>
+            </div>
+        </div>
+        <hr style="border: 1px solid #000;">
         <div class="row mt-4">
             <div class="col">
                 <table class="table table-hover table-bordered">

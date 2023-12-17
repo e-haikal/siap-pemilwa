@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="tile">
-                    <h5>Laporan Perhitungan Suara</h5>
+                    <h5>Laporan Hasil Suara</h5>
                     <?php
                     if ($this->session->flashdata('success')) { ?>
                         <div class="alert alert-success"><?= $this->session->flashdata('success'); ?></div>

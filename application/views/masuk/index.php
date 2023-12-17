@@ -70,7 +70,7 @@
         ?>
         <h3 class="login-head"><i class="fa fa-lg fa-fw fa-users mr-1"></i>Pemilih</h3>
         <div class="form-group">
-          <label class="control-label">USERNAME</label>
+          <label class="control-label">NIM AMIKOM</label>
           <input class="form-control" name="username" type="text" placeholder="Username" autofocus>
         </div>
         <div class="form-group">

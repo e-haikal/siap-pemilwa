@@ -45,9 +45,10 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
+                                        <th>NIM</th>
                                         <th>Nama Pemilih</th>
-                                        <th>Kandidat yang Dipilih</th>
                                         <th>Status Memilih</th>
+                                        <th>Kandidat yang Dipilih</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,10 +57,11 @@
                                     foreach ($pemilih as $data) : ?>
                                         <tr>
                                             <td><?= $no; ?></td>
+                                            <td><?= $data->username; ?></td>
                                             <td><?= $data->nama_pemilih; ?></td>
-                                            <td><?= $data->nama_kandidat ? $data->nama_kandidat : ''; ?></td>
-                                            <!-- Ganti baris ini -->
+                                            <!-- status memilih -->
                                             <td><?= isset($data->id_pemilih) ? 'Sudah Memilih' : 'Belum'; ?> </td>
+                                            <td><?= $data->nama_kandidat ? $data->nama_kandidat : ''; ?></td>
                                         </tr>
                                     <?php
                                         $no++;
@@ -69,7 +71,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a href="<?= base_url('admin/pemilih/cetak'); ?>" class="btn btn-primary">Cetak</a>
+                        <a href="<?= base_url('admin/pemilih/cetak'); ?>" target="blank" class="btn btn-primary">Cetak</a>
                     </div>
                 </div>
             </div>

@@ -55,9 +55,9 @@
                   <thead>
                     <tr>
                       <th>No</th>
+                      <th>NIM</th>
                       <th>Nama</th>
                       <th>Jenis Kelamin</th>
-                      <th>Username</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
@@ -67,9 +67,9 @@
                     foreach ($pemilih as $data) : ?>
                         <tr>
                         <td><?= $no; ?></td>
+                        <td><?= $data->username; ?> </td>
                         <td><?= $data->nama_pemilih; ?></td>
                         <td><?= $data->jk_pemilih; ?></td>
-                        <td><?= $data->username; ?> </td>
                         <td>
                             <a href="<?= base_url('admin/pemilih/ubah/' . $data->id_pemilih); ?>" class="btn btn-info">Ubah</a>
                             <a href="<?= base_url('admin/pemilih/hapus/' . $data->id_pemilih); ?>" class="btn btn-danger">Hapus</a>
