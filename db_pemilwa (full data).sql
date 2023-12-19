@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 17, 2023 at 11:52 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- Host: localhost:3306
+-- Generation Time: Dec 18, 2023 at 08:09 PM
+-- Server version: 10.6.16-MariaDB-cll-lve
+-- PHP Version: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_pemilwa`
+-- Database: `u1704798_db_pemilwa`
 --
 
 -- --------------------------------------------------------
@@ -39,8 +39,8 @@ CREATE TABLE `kandidat` (
 --
 
 INSERT INTO `kandidat` (`id_kandidat`, `nama_kandidat`, `nomor_kandidat`, `foto_kandidat`) VALUES
-(13, 'Farista - Panji', '1', 'kandidat-11.png'),
-(14, 'Billy - Guntur', '2', 'kandidat-21.png');
+(1, 'Farista - Panji', '1', 'kandidat-11.png'),
+(2, 'Billy - Guntur', '2', 'kandidat-21.png');
 
 -- --------------------------------------------------------
 
@@ -200,7 +200,55 @@ INSERT INTO `pemilih` (`id_pemilih`, `nama_pemilih`, `jk_pemilih`, `username`, `
 (137, 'Tasliha Hilmina', 'Perempuan', '20.85.0123', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (138, 'Tegar Putra Brataditama', 'Laki-Laki', '21.82.1148', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (139, 'Tria Indah Lestari', 'Perempuan', '21.82.1080', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(140, 'Wibisono Wijaya', 'Laki-Laki', '21.82.1153', 'ee11cbb19052e40b07aac0ca060c23ee');
+(140, 'Wibisono Wijaya', 'Laki-Laki', '21.82.1153', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(141, 'Yofran', 'Laki-Laki', '22.12.2677', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(142, 'DEWI AYU MURTININGSIH', 'Perempuan', '22.12.2696', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(143, 'MUHAMMAD RISDIANSYAH', 'Laki-Laki', '22.12.2709', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(144, 'SYIFA SALSABILA', 'Perempuan', '22.12.2719', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(145, 'MUHAMMAD DAFFA ARDIANSYAH', 'Laki-Laki', '22.12.2722', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(146, 'DAMAR ADI NUGROHO', 'Laki-Laki', '22.12.2730', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(147, 'Ananda Bima Batara Indra Sakti Laudy', 'Laki-Laki', '22.12.2684', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(148, 'GERI MAPAN SINAMBELA', 'Laki-Laki', '22.12.2715', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(149, 'Yunita Ture', 'Perempuan', '22.12.2703', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(150, 'RIFKI TRIWIJAYA', 'Laki-Laki', '22.12.2695', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(151, 'RAGIL FRANSISKO OLA HAYON', 'Laki-Laki', '22.12.2720', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(152, 'NIKSON BARNABAS ALEANDRO BAAY', 'Laki-Laki', '22.12.2728', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(153, 'RAHARDYANDRA NAUFAL EFFENDY PRATAMA', 'Laki-Laki', '23.22.2514', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(154, 'ALFINA NUR HALIZA', 'Perempuan', '23.22.2517', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(155, 'ALICA MARSA MALIHAH WIDIGDO', 'Perempuan', '23.22.2524', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(156, 'FAUZI IKHSAN NOVANTO', 'Laki-Laki', '23.22.2525', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(157, 'ABIDAH RAHMI', 'Perempuan', '22.12.2682', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(158, 'Wahyu Adi Giantoro', 'Laki-Laki', '22.12.2712', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(159, 'ADI NUGROHO', 'Laki-Laki', '22.12.2710', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(160, 'AGUSTINUS LAUIS LUNG', 'Laki-Laki', '22.12.2718', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(161, 'AHMAD ALDIYANTO', 'Laki-Laki', '22.12.2726', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(162, 'ALAM MISBAKHU RIZQON', 'Laki-Laki', '22.12.2675', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(163, 'ALDI SOFIAN AHMAD', 'Laki-Laki', '22.12.2707', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(164, 'Alfandi Wicaksono', 'Laki-Laki', '22.12.2683', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(165, 'ALWAYS MUHAMMAD REZA YUDA PRATAMA', 'Laki-Laki', '22.12.2702', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(166, 'EFFIE AMALIA', 'Perempuan', '22.12.2689', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(167, 'AMRULLAH AGUNG PRASETYA', 'Laki-Laki', '22.12.2706', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(168, 'APRIAN KHAERUL', 'Laki-Laki', '22.12.2713', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(169, 'ARIF ZAELANI', 'Laki-Laki', '22.12.2681', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(170, 'ASTHIVIA OKTANDA AMITABA', 'Laki-Laki', '22.12.2724', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(171, 'Muh Arief Refadilla', 'Laki-Laki', '23.22.2526', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(172, 'ARYA TAMA GILANG', 'Laki-Laki', '22.12.2680', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(173, 'Muhammad Hammam', 'Laki-Laki', '22.12.1503', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(174, 'MUHAMMAD NATIVE MUTTAQIEN KURNIADI', 'Laki-Laki', '22.12.2732', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(175, 'NAJMAH NUR WAFIYAH', 'Perempuan', '22.12.2688', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(176, 'Indrati Nur Aisyah Wuryantari', 'Perempuan', '22.12.2723', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(177, 'NURI HERY PRATAMA', 'Laki-Laki', '22.12.2701', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(178, 'QADAR SADLY SAPUTRA', 'Laki-Laki', '22.12.2690', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(179, 'Radinka Syahputra', 'Laki-Laki', '22.12.2674', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(180, 'Ragil Haryo Sadewo', 'Laki-Laki', '22.12.2686', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(181, 'Ray Febrian Tomasila', 'Laki-Laki', '22.12.2691', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(182, 'Rifqi Ikbar Wahyono', 'Laki-Laki', '22.12.2714', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(183, 'RIO RADITYA BAGAS INDRAJATI', 'Laki-Laki', '22.12.2705', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(184, 'Sulton Bani Laju', 'Laki-Laki', '22.12.2700', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(185, 'SUTRISNO', 'Laki-Laki', '22.12.2679', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(186, 'WAKHID PRAMADYA PUTRA', 'Laki-Laki', '22.12.2698', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(187, 'WIRA PRADINA RESTI', 'Laki-Laki', '22.12.2687', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(188, 'ZAIDAN RAFIF SYAUQI', 'Laki-Laki', '22.12.2731', 'ee11cbb19052e40b07aac0ca060c23ee');
 
 -- --------------------------------------------------------
 
@@ -220,8 +268,8 @@ CREATE TABLE `petugas` (
 --
 
 INSERT INTO `petugas` (`id_petugas`, `nama_petugas`, `username`, `password`) VALUES
-(4, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(11, 'Haikal', 'haikal', 'a847b53f9999fc735ca2b6f1419c93d0');
+(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(2, 'Haikal', 'haikal', 'a847b53f9999fc735ca2b6f1419c93d0');
 
 -- --------------------------------------------------------
 
@@ -243,7 +291,97 @@ CREATE TABLE `pilih` (
 INSERT INTO `pilih` (`id_pilih`, `id_kandidat`, `id_pemilih`, `tgl_rekam`) VALUES
 (254, 13, 1, '2023-12-17 15:26:49'),
 (255, 13, 2, '2023-12-17 15:28:06'),
-(256, 14, 3, '2023-12-17 15:28:28');
+(256, 14, 3, '2023-12-17 15:28:28'),
+(257, 14, 4, '2023-12-17 22:23:31'),
+(258, 14, 5, '2023-12-17 22:25:03'),
+(259, 13, 6, '2023-12-17 22:27:33'),
+(260, 14, 7, '2023-12-17 22:27:59'),
+(261, 14, 8, '2023-12-17 22:28:15'),
+(262, 14, 9, '2023-12-17 22:28:26'),
+(263, 13, 10, '2023-12-17 22:29:55'),
+(264, 13, 11, '2023-12-17 22:41:49'),
+(265, 13, 12, '2023-12-17 22:44:51'),
+(266, 14, 13, '2023-12-17 23:48:07'),
+(267, 14, 14, '2023-12-17 23:48:23'),
+(268, 13, 15, '2023-12-17 23:48:50'),
+(269, 13, 16, '2023-12-17 23:49:05'),
+(270, 13, 17, '2023-12-17 23:49:20'),
+(271, 14, 19, '2023-12-17 23:49:47'),
+(272, 13, 20, '2023-12-17 23:50:00'),
+(273, 13, 21, '2023-12-17 23:50:14'),
+(274, 14, 22, '2023-12-17 23:50:28'),
+(275, 13, 23, '2023-12-17 23:50:39'),
+(276, 13, 24, '2023-12-17 23:52:13'),
+(277, 13, 25, '2023-12-17 23:53:10'),
+(278, 14, 26, '2023-12-17 23:53:25'),
+(279, 14, 27, '2023-12-17 23:53:42'),
+(280, 14, 28, '2023-12-17 23:54:36'),
+(281, 13, 29, '2023-12-17 23:56:11'),
+(282, 14, 30, '2023-12-17 23:56:23'),
+(283, 14, 31, '2023-12-17 23:56:37'),
+(284, 14, 32, '2023-12-17 23:57:10'),
+(285, 14, 33, '2023-12-17 23:57:23'),
+(286, 14, 34, '2023-12-17 23:57:43'),
+(287, 14, 35, '2023-12-17 23:58:02'),
+(288, 13, 36, '2023-12-17 23:58:20'),
+(289, 14, 37, '2023-12-17 23:59:24'),
+(290, 14, 38, '2023-12-18 00:00:02'),
+(291, 14, 39, '2023-12-18 00:01:52'),
+(292, 14, 40, '2023-12-18 00:02:13'),
+(293, 14, 41, '2023-12-18 00:02:27'),
+(294, 13, 42, '2023-12-18 00:02:52'),
+(295, 14, 43, '2023-12-18 00:03:06'),
+(296, 14, 44, '2023-12-18 00:03:21'),
+(297, 14, 45, '2023-12-18 00:03:42'),
+(298, 14, 46, '2023-12-18 00:03:57'),
+(299, 14, 47, '2023-12-18 00:04:40'),
+(300, 13, 48, '2023-12-18 00:05:33'),
+(301, 14, 50, '2023-12-18 00:06:20'),
+(302, 13, 49, '2023-12-18 00:08:51'),
+(303, 14, 51, '2023-12-18 00:09:58'),
+(304, 14, 52, '2023-12-18 00:10:20'),
+(305, 13, 53, '2023-12-18 00:10:31'),
+(306, 13, 54, '2023-12-18 00:10:41'),
+(307, 14, 55, '2023-12-18 00:10:53'),
+(308, 13, 56, '2023-12-18 00:12:52'),
+(309, 13, 57, '2023-12-18 00:13:02'),
+(310, 13, 58, '2023-12-18 00:13:14'),
+(311, 14, 59, '2023-12-18 00:13:27'),
+(312, 14, 60, '2023-12-18 00:13:37'),
+(313, 13, 61, '2023-12-18 00:13:51'),
+(314, 13, 62, '2023-12-18 00:14:02'),
+(315, 13, 63, '2023-12-18 00:14:17'),
+(316, 14, 64, '2023-12-18 00:14:34'),
+(317, 14, 65, '2023-12-18 00:14:56'),
+(318, 14, 66, '2023-12-18 00:15:35'),
+(319, 13, 67, '2023-12-18 00:15:45'),
+(320, 14, 68, '2023-12-18 00:15:59'),
+(321, 13, 71, '2023-12-18 00:16:31'),
+(322, 14, 72, '2023-12-18 00:16:44'),
+(323, 13, 73, '2023-12-18 00:16:57'),
+(324, 13, 74, '2023-12-18 00:17:13'),
+(325, 13, 75, '2023-12-18 00:17:59'),
+(326, 13, 76, '2023-12-18 00:45:47'),
+(327, 13, 77, '2023-12-18 00:46:06'),
+(328, 14, 78, '2023-12-18 00:46:26'),
+(329, 13, 79, '2023-12-18 00:46:39'),
+(330, 13, 80, '2023-12-18 00:46:58'),
+(331, 13, 81, '2023-12-18 00:47:12'),
+(332, 13, 82, '2023-12-18 00:47:23'),
+(333, 14, 83, '2023-12-18 00:47:35'),
+(334, 14, 84, '2023-12-18 00:47:54'),
+(335, 13, 85, '2023-12-18 00:48:06'),
+(336, 14, 86, '2023-12-18 00:48:22'),
+(337, 14, 87, '2023-12-18 00:48:32'),
+(338, 14, 88, '2023-12-18 00:48:49'),
+(339, 13, 89, '2023-12-18 00:49:02'),
+(340, 13, 90, '2023-12-18 00:51:16'),
+(341, 14, 91, '2023-12-18 00:52:54'),
+(342, 14, 92, '2023-12-18 00:53:04'),
+(343, 13, 93, '2023-12-18 00:54:20'),
+(344, 13, 95, '2023-12-18 00:58:05'),
+(345, 13, 94, '2023-12-18 00:58:16'),
+(346, 13, 96, '2023-12-18 14:55:30');
 
 --
 -- Indexes for dumped tables
@@ -289,7 +427,7 @@ ALTER TABLE `kandidat`
 -- AUTO_INCREMENT for table `pemilih`
 --
 ALTER TABLE `pemilih`
-  MODIFY `id_pemilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id_pemilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
 
 --
 -- AUTO_INCREMENT for table `petugas`
@@ -301,7 +439,7 @@ ALTER TABLE `petugas`
 -- AUTO_INCREMENT for table `pilih`
 --
 ALTER TABLE `pilih`
-  MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=257;
+  MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=347;
 
 --
 -- Constraints for dumped tables
