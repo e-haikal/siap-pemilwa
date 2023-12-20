@@ -87,8 +87,6 @@
           </div>
         </div>
       </div>
-
-
     </main>
     <?php $this->load->view('./admin/_partials/bottom'); ?>
 

@@ -85,7 +85,7 @@ class Pemilih extends CI_Controller
         $cek = $this->db->get_where('pilih', array('id_pemilih' => $pemilih));
         $banyak = $cek->num_rows();
         if ($banyak >= 1) {
-            $status_memilih = 'sudah memilih';
+            $status_memilih = 'telah memilih';
         } else {
             $status_memilih = 'belum memiiih';
         }
@@ -98,7 +98,7 @@ class Pemilih extends CI_Controller
             redirect('admin/masuk');
         } else {
             // Fetch the required data from the database with JOIN
-            $this->db->select('pemilih.username, pemilih.nama_pemilih, kandidat.nama_kandidat, pilih.id_pemilih');
+            $this->db->select('pemilih.username, pemilih.nama_pemilih, kandidat.nama_kandidat, pilih.id_pemilih, pilih.tgl_rekam');
             $this->db->from('pemilih');
             $this->db->join('pilih', 'pemilih.id_pemilih = pilih.id_pemilih', 'left');
             $this->db->join('kandidat', 'pilih.id_kandidat = kandidat.id_kandidat', 'left');
@@ -110,7 +110,7 @@ class Pemilih extends CI_Controller
     public function cetak()
     {
         // Fetch the required data from the database with JOIN
-        $this->db->select('pemilih.username, pemilih.nama_pemilih, kandidat.nama_kandidat, pilih.id_pemilih');
+        $this->db->select('pemilih.username, pemilih.nama_pemilih, kandidat.nama_kandidat, pilih.id_pemilih, pilih.tgl_rekam');
         $this->db->from('pemilih');
         $this->db->join('pilih', 'pemilih.id_pemilih = pilih.id_pemilih', 'left');
         $this->db->join('kandidat', 'pilih.id_kandidat = kandidat.id_kandidat', 'left');

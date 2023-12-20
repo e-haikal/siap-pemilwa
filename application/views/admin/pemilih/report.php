@@ -49,6 +49,7 @@
                                         <th>Nama Pemilih</th>
                                         <th>Status Memilih</th>
                                         <th>Kandidat yang Dipilih</th>
+                                        <th>Tanggal Rekam</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -60,8 +61,9 @@
                                             <td><?= $data->username; ?></td>
                                             <td><?= $data->nama_pemilih; ?></td>
                                             <!-- status memilih -->
-                                            <td><?= isset($data->id_pemilih) ? 'Sudah Memilih' : 'Belum'; ?> </td>
+                                            <td><?= isset($data->id_pemilih) ? 'Telah Memilih' : 'Belum Memilih'; ?> </td>
                                             <td><?= $data->nama_kandidat ? $data->nama_kandidat : ''; ?></td>
+                                            <td><?= $data->tgl_rekam;?></td>     
                                         </tr>
                                     <?php
                                         $no++;
