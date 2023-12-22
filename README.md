@@ -34,7 +34,7 @@ Password: admin / haikal
 
 ```
 localhost/pemilwa_amk
-Username: user
+Username: [nim]
 Password: user
 ```
 
