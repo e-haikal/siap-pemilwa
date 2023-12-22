@@ -52,7 +52,7 @@
                   </select>                
                 </div>
                 <div class="form-group">
-                  <label class="control-label">Username</label>
+                  <label class="control-label">NIM</label>
                   <input class="form-control" type="text" name="username">
                 </div>
                 <div class="form-group">
