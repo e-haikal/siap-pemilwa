@@ -1,9 +1,9 @@
 <header class="app-header">
-  <!-- <a class="app-header__logo" href="utama">Pemilwa Amikom</a>
+  <!-- <a class="app-header__logo" href="utama">Siap Pemilwa</a>
  -->
   <!-- Logo with maximum size of 200x60 -->
   <a class="app-header__logo" href="utama">
-    <img src="<?= base_url('assets/images/siap-pemilwa-logo.gif'); ?>" alt="Logo" style="max-width: 200px; max-height: 60px;">
+    <img src="<?= base_url('assets/images/siap-pemilwa-horizontal-white.png'); ?>" alt="Logo" style="max-width: 200px; max-height: 60px;">
   </a>
   <!-- Sidebar toggle button--><a class="app-sidebar__toggle mt-1" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
   <!-- Navbar Right Menu-->

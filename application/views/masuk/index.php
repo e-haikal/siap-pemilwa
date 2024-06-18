@@ -89,7 +89,7 @@
             box-shadow: none;
             width: 100%;
             height: 40px;
-            background-color: #03A9F4;
+            background-color: #4A5AEC;
             color: #fff;
             border-radius: 25px;
             box-shadow: 3px 3px 3px #b1b1b1,
@@ -104,7 +104,7 @@
         .wrapper a {
             text-decoration: none;
             font-size: 0.8rem;
-            color: #03A9F4;
+            color: #4A5AEC;
         }
 
         .wrapper a:hover {
