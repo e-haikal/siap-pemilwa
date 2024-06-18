@@ -39,6 +39,20 @@
             box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
         }
 
+        .wrapper p a {
+            font-size: inherit;
+            /* Menggunakan ukuran font yang sama dengan elemen induk (p) */
+            color: #4A5AEC;
+            /* Warna teks */
+            text-decoration: none;
+            /* Menghilangkan garis bawah */
+        }
+
+        .wrapper p a:hover {
+            color: #039BE5;
+            /* Warna teks saat di-hover */
+        }
+
         .logo {
             width: 80px;
             margin: auto;

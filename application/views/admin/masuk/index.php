@@ -111,6 +111,20 @@
             color: #039BE5;
         }
 
+        .wrapper p a {
+            font-size: inherit;
+            /* Menggunakan ukuran font yang sama dengan elemen induk (p) */
+            color: #4A5AEC;
+            /* Warna teks */
+            text-decoration: none;
+            /* Menghilangkan garis bawah */
+        }
+
+        .wrapper p a:hover {
+            color: #039BE5;
+            /* Warna teks saat di-hover */
+        }
+
         @media(max-width: 380px) {
             .wrapper {
                 margin: 30px 20px;
@@ -145,7 +159,7 @@
             <button class="btn mt-3" type="submit">Login</button>
         </form>
         <div class="text-center fs-6">
-            <p>Apakah Anda Administrator? <a href="<?= base_url('masuk'); ?>">Klik di sini</a> untuk masuk.</p>
+            <p>Apakah Anda Mahasiswa? <a href="<?= base_url('masuk'); ?>">Klik di sini</a> untuk masuk.</p>
         </div>
     </div>
 
