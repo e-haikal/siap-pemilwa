@@ -58,7 +58,7 @@ class Utama extends CI_Controller
 
         // Logika untuk mengambil data perolehan suara
         $result['total_suara'] = $this->db->count_all_results('pilih');
-        
+
         // Ambil data perolehan suara kandidat
         $kandidat_data = $this->db->select('id_kandidat, COUNT(id_kandidat) as jumlah_suara')
             ->group_by('id_kandidat')
@@ -71,4 +71,6 @@ class Utama extends CI_Controller
 
         echo json_encode($result);
     }
+
+    
 }

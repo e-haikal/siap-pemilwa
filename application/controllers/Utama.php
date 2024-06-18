@@ -8,15 +8,29 @@ class Utama extends CI_Controller {
         parent:: __construct();
         $this->load->helper('url');
     }
-	public function index()
-	{
+
+    public function index() {
+        // Cek apakah user sudah login
+        if ($this->session->userdata('status') == 'login') {
+            // Jika sudah login, redirect ke dashboard
+            redirect('utama');
+        } else {
+            // Jika belum login, tampilkan halaman homepage
+            $this->load->view('homepage');
+        }
+    }
+
+    public function dashboard() {
+        // Pastikan user sudah login sebelum mengakses dashboard
         if ($this->session->userdata('status') != 'login') {
             redirect('masuk');
         } else {
-            $data['kandidat']=$this->db->get('kandidat')->result();
+            $data['kandidat'] = $this->db->get('kandidat')->result();
             $this->load->view('utama', $data);
         }
     }
+
+
     public function pilih()
     {
         $pemilih = $this->session->userdata('id_pemilih');
