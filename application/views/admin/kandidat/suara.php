@@ -15,6 +15,14 @@
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     <title>Pemilwa Amikom - Web Pemilihan Suara</title>
+    <style>
+        /* Custom CSS for positioning */
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,21 +45,19 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="tile">
+                <div class="tile"">
                     <h5>Laporan Hasil Suara</h5>
-                    <?php
-                    if ($this->session->flashdata('success')) { ?>
+                    <!-- Button "Cetak" di posisi kanan atas -->
+                    <div class="top-right">
+                        <a href="<?= base_url('admin/kandidat/csuara'); ?>" target="_blank" class="btn btn-primary">Cetak</a>
+                    </div>
+                    <?php if ($this->session->flashdata('success')) : ?>
                         <div class="alert alert-success"><?= $this->session->flashdata('success'); ?></div>
-                    <?php
-                    }
-                    ?>
-                    <?php
-                    if ($this->session->flashdata('error')) { ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('error')) : ?>
                         <div class="alert alert-danger"><?= $this->session->flashdata('error'); ?></div>
-                    <?php
-                    }
-                    ?>
-                    <div class="tile-body">
+                    <?php endif; ?>
+                    <div class="tile-body" style="margin-top: 20px;">
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered" id="sampleTable">
                                 <thead>
@@ -84,16 +90,12 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a href="<?= base_url('admin/kandidat/csuara'); ?>" target="blank" class="btn btn-primary">Cetak</a>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </main>
     <?php $this->load->view('./admin/_partials/bottom'); ?>
-
 </body>
 
 </html>

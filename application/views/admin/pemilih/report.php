@@ -15,6 +15,14 @@
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     <title>Vali Admin - Free Bootstrap 4 Admin Template</title>
+    <style>
+        /* Custom CSS for positioning */
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +47,11 @@
             <div class="col-md-12">
                 <div class="tile">
                     <h5>Laporan Status Pemilih</h5>
-                    <div class="tile-body">
+                    <!-- Button "Cetak" di posisi kanan atas -->
+                    <div class="top-right">
+                        <a href="<?= base_url('admin/pemilih/cetak'); ?>" target="_blank" class="btn btn-primary">Cetak</a>
+                    </div>
+                    <div class="tile-body" style="margin-top: 20px;">
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered" id="sampleTable">
                                 <thead>
@@ -64,8 +76,9 @@
                                             <!-- status memilih -->
                                             <td><?= isset($data->id_pemilih) ? 'Telah Memilih' : 'Belum Memilih'; ?> </td>
                                             <!-- tidak menampilkan kandidat yang dipilih -->
-                                            <!-- <td><?php// $data->nama_kandidat ? $data->nama_kandidat : ''; ?></td> -->
-                                            <td><?= $data->tgl_rekam;?></td>     
+                                            <!-- <td><? php // $data->nama_kandidat ? $data->nama_kandidat : ''; 
+                                                        ?></td> -->
+                                            <td><?= $data->tgl_rekam; ?></td>
                                         </tr>
                                     <?php
                                         $no++;
@@ -75,7 +88,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a href="<?= base_url('admin/pemilih/cetak'); ?>" target="blank" class="btn btn-primary">Cetak</a>
                     </div>
                 </div>
             </div>
