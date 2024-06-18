@@ -10,26 +10,59 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>Laporan Data Petugas</title>
+    <style>
+        .header-left {
+            text-align: left;
+        }
+
+        .header-center {
+            text-align: center;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        
+        body {
+            font-size: 14px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .table th,
+        .table td {
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body onload="window.print();">
     <div class="container py-5">
-        <div class="row">
+    <div class="row">
             <div class="col-1 mt-1">
-                <img src="<?= base_url('assets/images/logo-amikom-warna.png'); ?>" alt="Logo" style="max-width: 200px; max-height: 60px;">
+                <img src="<?= base_url('assets/images/siap-pemilwa-logo.png'); ?>" alt="Logo" style="max-width: 200px; max-height: 60px;">
             </div>
-            <div class="col-5 text-center">
+            <div class="col-5 header-center">
                 <h3 class="display-5 mb-0">Laporan Data Petugas</h3>
-                <h3 class="display-5 mt-0">Pemilwa Amikom</h3>
-
+                <h3 class="display-5 mt-0">Siap Pemilwa</h3>
             </div>
-            <div class="col-5 text-right">
-                <h5 class="font-weight-medium mb-0 mt-2">KAMPUS TERPADU</h5>
-                <p class="small">Jl. Ring Road Utara, Condong Catur, Depok, Sleman<br>
-                    Telp. (0274)884201 - 206, Faks : (0274)884208</p>
+            <div class="col-6 header-right">
+                <h5 class="font-weight-medium mb-0 mt-2">TUNTAS DIGITAL</h5>
+                <p class="small mb-0">Jl. Ring Road Utara, Condong Catur, Depok, Sleman<br>
+                    Website: https://siappemilwa.tuntasdigital.com</p>
             </div>
         </div>
         <hr style="border: 1px solid #000;">
+
+        
         <div class="row mt-4">
             <div class="col">
                 <table class="table table-hover table-bordered">

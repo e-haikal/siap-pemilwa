@@ -48,7 +48,8 @@
                                         <th>NIM</th>
                                         <th>Nama Pemilih</th>
                                         <th>Status Memilih</th>
-                                        <th>Kandidat yang Dipilih</th>
+                                        <!-- tidak menampilkan kandidat yang dipilih -->
+                                        <!-- <th>Kandidat yang Dipilih</th> -->
                                         <th>Tanggal Rekam</th>
                                     </tr>
                                 </thead>
@@ -62,7 +63,8 @@
                                             <td><?= $data->nama_pemilih; ?></td>
                                             <!-- status memilih -->
                                             <td><?= isset($data->id_pemilih) ? 'Telah Memilih' : 'Belum Memilih'; ?> </td>
-                                            <td><?= $data->nama_kandidat ? $data->nama_kandidat : ''; ?></td>
+                                            <!-- tidak menampilkan kandidat yang dipilih -->
+                                            <!-- <td><?php// $data->nama_kandidat ? $data->nama_kandidat : ''; ?></td> -->
                                             <td><?= $data->tgl_rekam;?></td>     
                                         </tr>
                                     <?php
