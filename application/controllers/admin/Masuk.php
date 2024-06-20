@@ -14,10 +14,6 @@ class Masuk extends CI_Controller {
         $this->load->view('admin/masuk/index');
     }
 
-    public function indexv2()
-	{
-        $this->load->view('admin/masuk/indexv2');
-    }
     public function aksi_login(){
         $username = $this->input->post('username');
         $password = md5($this->input->post('password'));

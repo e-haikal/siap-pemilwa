@@ -14,12 +14,6 @@ class Masuk extends CI_Controller {
         $this->load->view('masuk/index');
     }
 
-    
-    public function indexv2()
-	{
-        $this->load->view('masuk/indexv2');
-    }
-
     public function aksi_login(){
         $username = $this->input->post('username');
         $password = md5($this->input->post('password'));
@@ -33,7 +27,7 @@ class Masuk extends CI_Controller {
                 'status' => "login",
             );
             $this->session->set_userdata($data_session);
-            redirect('utama');
+            redirect('dashboard');
         } else {
             $this->session->set_flashdata('error', 'Username atau Password masih salah');
             redirect('masuk');
