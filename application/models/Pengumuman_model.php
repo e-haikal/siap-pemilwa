@@ -28,5 +28,9 @@ class Pengumuman_model extends CI_Model {
         return $this->db->where('id', $id)
                         ->delete('pengumuman');
     }
+
+    public function get_by_id($id) {
+        return $this->db->get_where('pengumuman', ['id' => $id])->row();
+    }
 }
 ?>
