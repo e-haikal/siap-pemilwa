@@ -48,7 +48,7 @@
                 <input class="form-control" type="text" name="nomor" placeholder="Nomor Kandidat">
               </div>
               <div class="form-group">
-                <label class="control-label">Visi Misi (max 250 karakter)</label>
+                <label class="control-label">Visi Misi</label>
                 <textarea class="form-control" name="visi_misi" rows="5" placeholder="Visi dan Misi kandidat"></textarea>
               </div>
               <div class="form-group">
