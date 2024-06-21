@@ -32,9 +32,11 @@
                 <div class="pengumuman-detail">
                     <p><strong>Tanggal:</strong> <?= $pengumuman->tanggal_posting; ?></p>
                     <h2><?= $pengumuman->judul; ?></h2>
+                    <br>
                     <?php if (!empty($pengumuman->gambar)) : ?>
                         <img src="<?= base_url('uploads/' . $pengumuman->gambar); ?>" alt="Gambar Pengumuman" class="img-fluid">
                     <?php endif; ?>
+                    <br>
                     <p><?= $pengumuman->isi; ?></p>
                 </div>
             </div>
