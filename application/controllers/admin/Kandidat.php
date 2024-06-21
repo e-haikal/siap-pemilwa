@@ -26,6 +26,7 @@
         {
             $nama = $this->input->post('nama');
             $nomor = $this->input->post('nomor');
+            $visi_misi = $this->input->post('visi_misi');
             $config['upload_path'] = './gambar/';
             $config['allowed_types'] = 'jpg|png|jpeg';
             $this->load->library('upload', $config);
@@ -34,6 +35,7 @@
                 $data = array(
                     'nama_kandidat' => $nama,
                     'nomor_kandidat' => $nomor,
+                    "visi_misi" => $visi_misi,
                     'foto_kandidat' => $upload['file_name']
                 );
                 $this->db->insert('kandidat', $data);
@@ -49,38 +51,51 @@
             $data['cari'] = $this->db->get_where('kandidat', array('id_kandidat' => $id))->result();
             $this->load->view('admin/kandidat/ubah', $data);
         }
+
         public function subah()
         {
             $nama = $this->input->post('nama');
             $nomor = $this->input->post('nomor');
+            $visi_misi = $this->input->post('visi_misi');
             $id = $this->input->post('kode');
-            if (isset($_FILES['foto']['tmp_name'])) {
+
+            // Periksa apakah ada file foto di-upload
+            if (!empty($_FILES['foto']['tmp_name'])) {
+                // Konfigurasi upload foto
                 $config['upload_path'] = './gambar/';
                 $config['allowed_types'] = 'jpg|png|jpeg';
                 $this->load->library('upload', $config);
+
+                // Coba melakukan upload foto
                 if ($this->upload->do_upload('foto')) {
                     $upload = $this->upload->data();
                     $data = array(
                         'nama_kandidat' => $nama,
                         'nomor_kandidat' => $nomor,
+                        'visi_misi' => $visi_misi,
                         'foto_kandidat' => $upload['file_name']
                     );
                 } else {
+                    // Jika upload foto gagal, tampilkan error
                     $this->session->set_flashdata('error', $this->upload->display_errors());
                     redirect('admin/kandidat');
                 }
             } else {
+                // Jika tidak ada file foto di-upload, hanya update data tanpa mengubah foto
                 $data = array(
                     'nama_kandidat' => $nama,
-                    'nomor_kandidat' => $nomor
+                    'nomor_kandidat' => $nomor,
+                    'visi_misi' => $visi_misi
                 );
             }
 
+            // Lakukan update data ke database
             $this->db->where('id_kandidat', $id);
             $this->db->update('kandidat', $data);
             $this->session->set_flashdata('success', 'Berhasil Disimpan');
             redirect('admin/kandidat');
         }
+
         public function hapus($id)
         {
             // Mendapatkan data kandidat berdasarkan ID
