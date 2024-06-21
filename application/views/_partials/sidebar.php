@@ -9,7 +9,7 @@
       <ul class="app-menu">
         <li><a class="app-menu__item" href="<?= base_url('dashboard'); ?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dasbhoard</span></a></li>
         <li><a class="app-menu__item" href="<?= base_url('utama'); ?>"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Pemilihan</span></a></li>
-        <li><a class="app-menu__item" href="<?= base_url('utama'); ?>"><i class="app-menu__icon fa fa-bullhorn"></i><span class="app-menu__label">Pengumuman</span></a></li>
+        <li><a class="app-menu__item" href="<?= base_url('pengumuman'); ?>"><i class="app-menu__icon fa fa-bullhorn"></i><span class="app-menu__label">Pengumuman</span></a></li>
 
       </ul>
     </aside>

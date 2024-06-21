@@ -13,6 +13,7 @@
             <li><a class="treeview-item" href="<?= base_url('admin/petugas'); ?>"><i class="icon fa fa-circle-o"></i> Petugas</a></li>
             <li><a class="treeview-item" href="<?= base_url('admin/kandidat'); ?> " rel="noopener"><i class="icon fa fa-circle-o"></i> Kandidat</a></li>
             <li><a class="treeview-item" href="<?= base_url('admin/pemilih'); ?>"><i class="icon fa fa-circle-o"></i> Pemilih</a></li>
+            <li><a class="treeview-item" href="<?= base_url('admin/pengumuman'); ?>"><i class="icon fa fa-circle-o"></i> Pengumuman</a></li>
           </ul>
         </li>
 

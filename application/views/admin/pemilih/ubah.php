@@ -30,7 +30,7 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
+          <h1><i class="fa fa-laptop"></i> Kelola</h1>
         </div>
       </div>
       <div class="row">

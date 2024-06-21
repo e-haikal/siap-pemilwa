@@ -14,15 +14,7 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Pemilwa Amikom - Web Pemilihan Suara</title>
-    <style>
-        /* Custom CSS for positioning */
-        .top-right {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
+    <title>Vali Admin - Free Bootstrap 4 Admin Template</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,62 +32,68 @@
     <main class="app-content">
         <div class="app-title">
             <div>
-                <h1><i class="fa fa-file"></i> Report</h1>
+                <h1><i class="fa fa-laptop"></i> Kelola</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="tile"">
-                    <h5>Laporan Hasil Suara</h5>
-                    <!-- Button "Cetak" di posisi kanan atas -->
-                    <div class="top-right">
-                        <a href="<?= base_url('admin/kandidat/csuara'); ?>" target="_blank" class="btn btn-primary">Cetak</a>
-                    </div>
+                <div class="tile">
+                    <h5>List Pengumuman</h5>
                     <?php if ($this->session->flashdata('success')) : ?>
                         <div class="alert alert-success"><?= $this->session->flashdata('success'); ?></div>
                     <?php endif; ?>
                     <?php if ($this->session->flashdata('error')) : ?>
                         <div class="alert alert-danger"><?= $this->session->flashdata('error'); ?></div>
                     <?php endif; ?>
-                    <div class="tile-body" style="margin-top: 20px;">
+
+                    <div class="tile-body">
                         <div class="table-responsive">
-                            <table class="table table-hover table-bordered" id="sampleTable">
+                            <table class="table table-hover table-bordered" id="pengumumanTable">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama</th>
-                                        <th>Nomor Kandidat</th>
-                                        <th>Perolehan Suara</th>
-                                        <th>Persentase</th>
+                                        <th>Judul</th>
+                                        <th>Tanggal Posting</th>
+                                        <th>Isi Pengumuman</th>
+                                        <th>Gambar</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    $no = 1;
-                                    foreach ($kandidat as $data) :
-                                        $cek = $this->db->get_where('pilih', array('id_kandidat' => $data->id_kandidat))->num_rows();
-                                        $suara = ($cek / $pilih) * 100;
-                                    ?>
+                                    <?php $no = 1; foreach ($pengumuman as $p) : ?>
                                         <tr>
-                                            <td><?= $no; ?></td>
-                                            <td><?= $data->nama_kandidat; ?></td>
-                                            <td><?= $data->nomor_kandidat; ?></td>
-                                            <td><?= $cek; ?></td>
-                                            <td><?= number_format($suara, 2) . "%"; ?></td>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $p->judul; ?></td>
+                                            <td><?= date('d M Y', strtotime($p->tanggal_posting)); ?></td>
+                                            <td><?= substr($p->isi, 0, 50); ?>...</td>
+                                            <td>
+                                                <?php if (!empty($p->gambar)) : ?>
+                                                    <img src="<?= base_url('uploads/' . $p->gambar); ?>" alt="Gambar Pengumuman" style="max-width: 100px;">
+                                                <?php else : ?>
+                                                    <span>Tidak ada gambar</span>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td>
+                                                <a href="<?= base_url('admin/pengumuman/edit/' . $p->id); ?>" class="btn btn-sm btn-info">Ubah</a>
+                                                <a href="<?= base_url('admin/pengumuman/hapus/' . $p->id); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin ingin menghapus pengumuman ini?')">Hapus</a>
+                                            </td>
                                         </tr>
-                                    <?php
-                                        $no++;
-                                    endforeach;
-                                    ?>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
+                        <a href="<?= base_url('admin/pengumuman/tambah_form'); ?>" class="btn btn-primary">Tambah</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <?php $this->load->view('./admin/_partials/bottom'); ?>
+
+    
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="<?= base_url('assets/js/main.js'); ?>"></script>
 </body>
 
 </html>
