@@ -15,13 +15,18 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <link rel="stylesheet" href="<?= base_url('assets/css/main.css'); ?>">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/main.css'); ?>">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body class="app sidebar-mini">
+    <!-- Navbar-->
     <?php $this->load->view('./admin/_partials/navbar'); ?>
+    <!-- Sidebar menu-->
     <?php $this->load->view('./admin/_partials/sidebar'); ?>
     <main class="app-content">
         <div class="app-title">
@@ -30,7 +35,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-12">
                 <div class="tile">
                     <h5>Data Pengumuman</h5>
                     <?php if ($this->session->flashdata('success')) : ?>
@@ -58,7 +63,7 @@
                                             <td><?= $p->id; ?></td>
                                             <td><?= $p->tanggal_posting; ?></td>
                                             <td><?= $p->judul; ?></td>
-                                            <td><?= $p->isi; ?></td>
+                                            <td><?= substr($p->isi, 0, 50); ?>...</td>
 
                                             <td>
                                                 <?php if ($p->gambar) : ?>
