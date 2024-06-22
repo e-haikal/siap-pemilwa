@@ -71,7 +71,7 @@
                     <h1>Siap Pemilwa</h1>
                     <h2>Siap Pemilwa membuka ruang untuk pemilihan presma & wakil presma yang efisien dan transparan.</h2>
                     <div class="d-flex">
-                        <a href="<?= base_url('masuk'); ?>" target="_blank" class="btn-get-started scrollto">Mulai Memilih</a>
+                        <a href="<?= base_url('masuk'); ?>" target="_blank" class="btn-get-started">Mulai Memilih</a>
                         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Nontoh Cara Memilih</span></a>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                                 <div class="card-body text-center">
                                     <h5 class="card-title"><?= $data->nama_kandidat; ?></h5>
                                     <img src="<?= base_url('gambar/' . $data->foto_kandidat); ?>" style="height: 250px; width: 250px;" class="rounded mx-auto d-block mb-3" alt="Foto Kandidat">
-                                    <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#visiMisiModal<?= $data->id_kandidat; ?>">
+                                    <button type="button" class="btn btn-secondary mt-3" data-toggle="modal" data-target="#visiMisiModal<?= $data->id_kandidat; ?>">
                                         Lihat Visi Misi
                                     </button>
                                 </div>
@@ -288,33 +288,37 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up" style="margin-bottom: 40px;">
                 <h2>Pengumuman</h2>
-            </div>
-            <!-- End Section Title -->
-
-            <!-- Pengumuman List -->
-            <div class="container pengumuman-list">
+            </div><!-- End Section Title -->
+            <div class="pengumuman-list">
                 <?php if (!empty($pengumuman)) : ?>
                     <div class="row">
+                        <?php $count = 0; ?>
                         <?php foreach ($pengumuman as $p) : ?>
-                            <div class="col-md-4">
-                                <div class="card" data-aos="fade-up">
+                            <div class="col-md-4 card-column">
+                                <div class="card">
                                     <?php if (!empty($p->gambar)) : ?>
-                                        <img src="<?= base_url('uploads/' . $p->gambar); ?>" class="card-img-top" alt="Gambar Pengumuman">
+                                        <img src="<?= base_url('uploads/' . $p->gambar); ?>" alt="Gambar Pengumuman" class="card-img-top">
                                     <?php endif; ?>
                                     <div class="card-body">
                                         <h5 class="card-title"><?= $p->judul; ?></h5>
-                                        <p class="card-text"><?= substr($p->isi, 0, 250); ?> ...</p>
+                                        <p class="card-text"><?= substr($p->isi, 0, 250); ?>...</p>
                                         <a href="<?= base_url('pengumuman/detail/' . $p->id); ?>">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
+                            <?php $count++; ?>
+                            <?php if ($count >= 3) break; ?>
                         <?php endforeach; ?>
                     </div>
+                    <?php if (count($pengumuman) > 3) : ?>
+                        <div class="text-center mt-4">
+                            <a href="<?= base_url('semua_pengumuman'); ?>" class="btn btn-primary">Lihat Semua Pengumuman</a>
+                        </div>
+                    <?php endif; ?>
                 <?php else : ?>
                     <p>Tidak ada pengumuman saat ini.</p>
                 <?php endif; ?>
             </div>
-            <!-- End Pengumuman List -->
         </section>
         <!-- End Pengumuman Section -->
         <!-- End Pengumuman Section -->
