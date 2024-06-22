@@ -6,6 +6,42 @@
 * License: https://bootstrapmade.com/license/
 */
 
+:root {
+  --royal-blue: #4A5AEC; /*primary color*/
+  --torquoise: #00E4BD; /*secondary color*/
+  --gunmetal: #222D32;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --green-light: #16df7e;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #FFF;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: royalblue;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --purple-dark: #300E6A;
+  --blue-light: #4A1B9D;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -20,7 +56,7 @@ a {
 }
 
 a:hover {
-  color: #206bfb;
+  color: royalblue;
   text-decoration: none;
 }
 
@@ -168,9 +204,9 @@ h6 {
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-  background: #206bfb;
+  background: royalblue;
   color: #fff;
-  border-color: #206bfb;
+  border-color: royalblue;
 }
 
 .navbar .dropdown ul {
@@ -389,7 +425,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #206bfb;
+  background: royalblue;
   box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
 }
 
@@ -788,7 +824,7 @@ section {
   right: 40px;
   font-size: 24px;
   top: calc(50% - 18px);
-  color: #206bfb;
+  color: royalblue;
   transition: 0.3s;
 }
 
@@ -1074,8 +1110,8 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #206bfb;
-  border-color: #206bfb;
+  background: royalblue;
+  border-color: royalblue;
 }
 
 /*--------------------------------------------------------------
@@ -1285,7 +1321,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #206bfb;
+  background: royalblue;
 }
 
 @keyframes animate-loading {
@@ -1422,7 +1458,7 @@ section {
 }
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #206bfb;
+  background: royalblue;
 }
 
 #footer .footer-top .social-links {
