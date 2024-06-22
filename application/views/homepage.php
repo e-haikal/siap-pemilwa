@@ -282,6 +282,43 @@
             </div>
         </section><!-- End Testimonials Section -->
 
+        <!-- Start Pengumuman Section -->
+        <!-- Start Pengumuman Section -->
+        <section id="pengumuman" class="pengumuman section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up" style="margin-bottom: 40px;">
+                <h2>Pengumuman</h2>
+            </div>
+            <!-- End Section Title -->
+
+            <!-- Pengumuman List -->
+            <div class="container pengumuman-list">
+                <?php if (!empty($pengumuman)) : ?>
+                    <div class="row">
+                        <?php foreach ($pengumuman as $p) : ?>
+                            <div class="col-md-4">
+                                <div class="card" data-aos="fade-up">
+                                    <?php if (!empty($p->gambar)) : ?>
+                                        <img src="<?= base_url('uploads/' . $p->gambar); ?>" class="card-img-top" alt="Gambar Pengumuman">
+                                    <?php endif; ?>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $p->judul; ?></h5>
+                                        <p class="card-text"><?= substr($p->isi, 0, 250); ?> ...</p>
+                                        <a href="<?= base_url('pengumuman/detail/' . $p->id); ?>">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else : ?>
+                    <p>Tidak ada pengumuman saat ini.</p>
+                <?php endif; ?>
+            </div>
+            <!-- End Pengumuman List -->
+        </section>
+        <!-- End Pengumuman Section -->
+        <!-- End Pengumuman Section -->
+
 
         <!-- Faq Section -->
         <section id="faq" class="faq section">

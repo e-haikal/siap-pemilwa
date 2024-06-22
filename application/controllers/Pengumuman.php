@@ -25,5 +25,6 @@ class Pengumuman extends CI_Controller
 
         $this->load->view('pengumuman_detail', $data);
     }
+    
 }
 ?>

@@ -23,6 +23,9 @@ class Utama extends CI_Controller
 
             // Panggil method get_all() dari model untuk mendapatkan semua kandidat
             $data['kandidat'] = $this->Kandidat_model->get_all();   
+
+            // Panggil method get_all() dari model untuk mendapatkan semua kandidat
+            $data['pengumuman'] = $this->Pengumuman_model->get_all_pengumuman();   
                   
             // Load view homepage.php dan kirimkan data ke view
             $this->load->view('homepage', $data);
