@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Daftar Pengumuman</title>
@@ -20,9 +21,9 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/main.css'); ?>">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
+
 <body class="app sidebar-mini">
     <!-- Navbar-->
     <?php $this->load->view('./admin/_partials/navbar'); ?>
@@ -35,7 +36,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-12">
                 <div class="tile">
                     <h5>Data Pengumuman</h5>
                     <?php if ($this->session->flashdata('success')) : ?>
@@ -93,4 +94,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
