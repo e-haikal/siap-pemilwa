@@ -33,6 +33,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
 </head>
 
 <body>
@@ -152,82 +153,51 @@
 
         <!-- Daftar Kandidat Section -->
         <section id="daftar-kandidat" class="daftar-kandidat">
-            <div class="section-title" style="margin-bottom: 10px;"">
-                <h2>Daftar Kandidat</h2>
-            </div>
+            <div class="container">
+                <div class="section-title" style="margin-bottom: 30px;">
+                    <h2>Daftar Kandidat</h2>
+                    <p>Berikut adalah kandidat presma dan wakil presma beserta visi dan misi mereka.</p>
+                </div>
 
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header" style="text-align: center;">
-                            <h2><bold>1</bold></h2> <!-- Judul header untuk kandidat 1 -->
-                            <hr>
+                <div class="row">
+                    <?php
+                    $count = count($kandidat);
+                    foreach ($kandidat as $data) :
+                        // Tentukan kelas berdasarkan jumlah kandidat
+                        $col_class = ($count < 3) ? 'col-md-6' : 'col-lg-4 col-md-6';
+                    ?>
+                        <div class="<?= $col_class ?> col-sm-12 mt-2">
+                            <div class="card">
+                                <h3 class="card-header text-center"><?= $data->nomor_kandidat; ?></h3>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title"><?= $data->nama_kandidat; ?></h5>
+                                    <img src="<?= base_url('gambar/' . $data->foto_kandidat); ?>" style="height: 250px; width: 250px;" class="rounded mx-auto d-block mb-3" alt="Foto Kandidat">
+                                    <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#visiMisiModal<?= $data->id_kandidat; ?>">
+                                        Lihat Visi Misi
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <img src="gambar/kandidat-1.png" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                            <p>Calon Presiden Mahasiswa</p>
-                            <h4><strong>Farista Nur Fazri Yuni</strong></h4>
-                            <hr>
-                            <p>Calon Wakil Presiden Mahasiswa</p>
-                            <h4><strong>Panji Revolusioner Saputra</strong></h4>
+                        <!-- Modal -->
+                        <div class="modal fade" id="visiMisiModal<?= $data->id_kandidat; ?>" tabindex="-1" role="dialog" aria-labelledby="visiMisiModalLabel<?= $data->id_kandidat; ?>" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="visiMisiModalLabel<?= $data->id_kandidat; ?>">Visi Misi <?= $data->nama_kandidat; ?></h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?= $data->visi_misi; ?>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="col">
-                    <div class="card">
-                    <div class="card-header" style="text-align: center;">
-                            <h2><bold>2</bold></h2> <!-- Judul header untuk kandidat 1 -->
-                            <hr>
-                        </div>
-                        <img src="gambar/kandidat-2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p>Calon Presiden Mahasiswa</p>
-                            <h4><strong>Billy Silalahi</strong></h4>
-                            <hr>
-                            <p>Calon Wakil Presiden Mahasiswa</p>
-                            <h4><strong>Guntur Ardani Putra</strong></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
         <!-- End Daftar Kandidat Section -->
-
-
-        <!-- End Daftar Kandidat Section -->
-
-
-        <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Hasil Sementara</h2>
-                <p>Data diperbarui tiap 5 menit.</p>
-
-            </div><!-- End Section Title -->
-
-            <div class="container">
-                <div class="row counters">
-                    <div class="col-lg-3 col-6 text-center">
-                        <span id="counterPemilih" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Pemilih</p>
-                    </div>
-                    <div class="col-lg-3 col-6 text-center">
-                        <span id="counterSuaraMasuk" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Suara Masuk</p>
-                    </div>
-                    <div class="col-lg-3 col-6 text-center">
-                        <span id="counterSuaraKandidat1" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Kandidat 1</p>
-                    </div>
-                    <div class="col-lg-3 col-6 text-center">
-                        <span id="counterSuaraKandidat2" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Kandidat 2</p>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Counts Section -->
 
 
         <!-- ======= Testimonials Section ======= -->
@@ -441,90 +411,10 @@
     <!-- Template Main JS File -->
     <script src="assets/js/home-main.js"></script>
 
-
-    <!-- Fetch data pemilih di Home -->
-    <script src="<?= base_url('assets/js/jquery-3.3.1.min.js'); ?>"></script>
-    <script type="text/javascript">
-        function updateSuaraMasuk() {
-            $.ajax({
-                url: '<?= base_url('admin/utama/get_suara_masuk'); ?>',
-                type: 'GET',
-                dataType: 'json',
-                success: function(response) {
-                    $('#counterSuaraMasuk').attr('data-purecounter-end', response.suara_masuk);
-                    new PureCounter().start(); // Restart PureCounter
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error updating Suara Masuk:', status, error);
-                }
-            });
-        }
-
-        function updateJumlahPemilih() {
-            $.ajax({
-                url: '<?= base_url('admin/utama/get_jumlah_pemilih'); ?>',
-                type: 'GET',
-                dataType: 'json',
-                success: function(response) {
-                    $('#counterPemilih').attr('data-purecounter-end', response.jumlah_pemilih);
-                    new PureCounter().start(); // Restart PureCounter
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error updating Jumlah Pemilih:', status, error);
-                }
-            });
-        }
-
-        function updateSuaraKandidat1() {
-            $.ajax({
-                url: '<?= base_url('admin/utama/get_perolehan_suara'); ?>',
-                type: 'GET',
-                dataType: 'json',
-                success: function(response) {
-                    var perolehan_suara = response.perolehan_suara;
-                    $('#counterSuaraKandidat1').attr('data-purecounter-end', perolehan_suara['1'] || 0);
-                    new PureCounter().start(); // Restart PureCounter
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error updating Suara Kandidat 1:', status, error);
-                }
-            });
-        }
-
-        function updateSuaraKandidat2() {
-            $.ajax({
-                url: '<?= base_url('admin/utama/get_perolehan_suara'); ?>',
-                type: 'GET',
-                dataType: 'json',
-                success: function(response) {
-                    var perolehan_suara = response.perolehan_suara;
-                    $('#counterSuaraKandidat2').attr('data-purecounter-end', perolehan_suara['2'] || 0);
-                    new PureCounter().start(); // Restart PureCounter
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error updating Suara Kandidat 2:', status, error);
-                }
-            });
-        }
-
-        // Panggil fungsi update di sini saat dokumen siap
-        $(document).ready(function() {
-            updateSuaraMasuk();
-            updateJumlahPemilih();
-            updateSuaraKandidat1();
-            updateSuaraKandidat2();
-
-            // Tambahkan interval untuk memperbarui data setiap 15 detik (15000 milidetik)
-            setInterval(function() {
-                updateSuaraMasuk();
-                updateJumlahPemilih();
-                updateSuaraKandidat1();
-                updateSuaraKandidat2();
-            }, 300000);
-        });
-    </script>
-
-
+    <!-- Bootstrap JS dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 
