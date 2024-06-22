@@ -83,7 +83,8 @@
                       </td>
                       <td>
                         <a href="<?= base_url('admin/kandidat/ubah/' . $data->id_kandidat); ?>" class="btn btn-info">Ubah</a>
-                        <a href="<?= base_url('admin/kandidat/hapus/' . $data->id_kandidat); ?>" class="btn btn-danger">Hapus</a>
+                        <a href="<?= base_url('admin/kandidat/hapus/' . $data->id_kandidat); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kandidat ini?')">Hapus</a>
+
                       </td>
                     </tr>
                   <?php

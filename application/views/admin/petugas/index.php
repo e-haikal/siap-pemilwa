@@ -64,7 +64,7 @@
                         <td><?= $data->username; ?></td>
                         <td>
                             <a href="<?= base_url('admin/petugas/ubah/' . $data->id_petugas); ?>" class="btn btn-info">Ubah</a>
-                            <a href="<?= base_url('admin/petugas/hapus/' . $data->id_petugas); ?>" class="btn btn-danger">Hapus</a>
+                            <a href="<?= base_url('admin/petugas/hapus/' . $data->id_petugas); ?>" class="btn btn-danger"  onclick="return confirm('Apakah Anda yakin ingin menghapus petugas ini?')">Hapus</a>
                         </td>
                         </tr>
                         <?php

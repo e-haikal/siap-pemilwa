@@ -72,7 +72,7 @@
                         <td><?= $data->jk_pemilih; ?></td>
                         <td>
                             <a href="<?= base_url('admin/pemilih/ubah/' . $data->id_pemilih); ?>" class="btn btn-info">Ubah</a>
-                            <a href="<?= base_url('admin/pemilih/hapus/' . $data->id_pemilih); ?>" class="btn btn-danger">Hapus</a>
+                            <a href="<?= base_url('admin/pemilih/hapus/' . $data->id_pemilih); ?>" class="btn btn-danger"  onclick="return confirm('Apakah Anda yakin ingin menghapus pemilih ini?')">Hapus</a>
                         </td>
                         </tr>
                         <?php
