@@ -55,6 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['utama'] = 'utama/dashboard';
 
 $route['pengumuman'] = 'pengumuman/index';
+$route['semua_pengumuman'] = 'pengumuman_home/semua_pengumuman';
+
 
 
 

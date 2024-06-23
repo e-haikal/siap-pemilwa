@@ -13,8 +13,17 @@ class Pengumuman extends CI_Controller
     public function index()
     {
         $data['pengumuman'] = $this->Pengumuman_model->get_all_pengumuman();
-        $this->load->view('pengumuman', $data); // Tampilkan view pengumuman untuk user
+        
+        // Determine if the user is coming from homepage or dashboard
+        $data['from_homepage'] = $this->input->get('from_homepage') == 'true';
+
+        if ($data['from_homepage']) {
+            $this->load->view('pengumuman_home/semua_pengumuman', $data);
+        } else {
+            $this->load->view('pengumuman', $data);
+        }
     }
+    
 
     public function detail($id)
     {

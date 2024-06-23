@@ -50,7 +50,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto " href="#pengumuman">Pengumuman</a></li>
+                    <li><a href="<?= base_url('pengumuman/index?from_homepage=true'); ?>" class="btn-get-started">Pengumuman</a></li>
                     <li><a href="<?= base_url('masuk'); ?>" class="btn-get-started">Masuk</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -308,7 +308,7 @@
                     </div>
                     <?php if (count($pengumuman) > 3) : ?>
                         <div class="text-center mt-4">
-                            <a href="<?= base_url('semua_pengumuman'); ?>" class="btn btn-primary">Lihat Semua Pengumuman</a>
+                            <a href="<?= base_url('pengumuman/index?from_homepage=true'); ?>" class="btn btn-primary">Lihat Semua Pengumuman</a>
                         </div>
                     <?php endif; ?>
                 <?php else : ?>
