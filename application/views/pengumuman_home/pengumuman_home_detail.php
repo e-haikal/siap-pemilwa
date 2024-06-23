@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -11,21 +10,21 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../../assets/img/favicon.png" rel="icon">
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/boxicons/css/boxicons.min.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/glightbox/css/glightbox.min.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/vendor/swiper/swiper-bundle.min.css'); ?>" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: eNno
@@ -35,43 +34,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-    <style>
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .container .pengumuman-detail {
-            text-align: left;
-        }
-
-        .pengumuman-detail img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .pengumuman-detail h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .pengumuman-detail p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .pengumuman-detail strong {
-            display: block;
-            margin-bottom: 10px;
-        }
-    </style>
-    </style>
-
 </head>
 
 <body>
@@ -80,19 +42,14 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <!-- <h1 class="logo"><a href="#">Siap Pemilwa</a></h1> -->
-
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="#" class="logo"><img src="assets/images/siap-pemilwa-horizontal-black.png" alt="" class="img-fluid"></a>
+            <a href="#" class="logo"><img src="<?= base_url('assets/images/siap-pemilwa-horizontal-black.png'); ?>" alt="" class="img-fluid"></a>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#cara-memilih">Cara Memilih</a></li>
-                    <li><a class="nav-link scrollto" href="#daftar-kandidat">Daftar Kandidat</a></li>
-                    <li><a class="nav-link scrollto" href="#counts">Hasil Sementara</a></li>
-                    <li><a class="nav-link scrollto " href="#testimonials">Testimoni</a></li>
-                    <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+                    <li><a href="<?= base_url(''); ?>" class="btn-get-started">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#pengumuman">Pengumuman</a></li>
+                    <li><a href="<?= base_url('masuk'); ?>" class="btn-get-started">Masuk</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -100,19 +57,41 @@
         </div>
     </header><!-- End Header -->
 
-    <div class="container">
-        <div class="pengumuman-detail">
-            <p><strong>Tanggal:</strong> <?= $pengumuman->tanggal_posting; ?></p>
-            <h2><?= $pengumuman->judul; ?></h2>
-            <br>
-            <?php if (!empty($pengumuman->gambar)) : ?>
-                <img src="<?= base_url('uploads/' . $pengumuman->gambar); ?>" alt="Gambar Pengumuman" class="img-fluid">
-            <?php endif; ?>
-            <br>
-            <p><?= $pengumuman->isi; ?></p>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="pengumuman-detail text-left" style="margin-top: 30px;">
+                    <p><strong>Tanggal:</strong> <?= $pengumuman->tanggal_posting; ?></p>
+                    <h2><?= $pengumuman->judul; ?></h2>
+                    <br>
+                    <?php if (!empty($pengumuman->gambar)) : ?>
+                        <img src="<?= base_url('uploads/' . $pengumuman->gambar); ?>" alt="Gambar Pengumuman" class="img-fluid mx-auto d-block" style="max-width: 50%;">
+                    <?php endif; ?>
+                    <br>
+                    <p><?= $pengumuman->isi; ?></p>
+                </div>
+            </div>
         </div>
     </div>
-    <?php $this->load->view('_partials/bottom'); ?>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="<?= base_url('assets/vendor/purecounter/purecounter_vanilla.js'); ?>"></script>
+    <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/vendor/glightbox/js/glightbox.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/vendor/isotope-layout/isotope.pkgd.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/vendor/php-email-form/validate.js'); ?>"></script>
+
+    <!-- Template Main JS File -->
+    <script src="<?= base_url('assets/js/home-main.js'); ?>"></script>
+
+    <!-- Bootstrap JS dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

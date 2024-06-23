@@ -50,15 +50,11 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#cara-memilih">Cara Memilih</a></li>
-                    <li><a class="nav-link scrollto" href="#daftar-kandidat">Daftar Kandidat</a></li>
-                    <li><a class="nav-link scrollto" href="#counts">Hasil Sementara</a></li>
-                    <li><a class="nav-link scrollto " href="#testimonials">Testimoni</a></li>
-                    <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+                    <li><a class="nav-link scrollto " href="#pengumuman">Pengumuman</a></li>
+                    <li><a href="<?= base_url('masuk'); ?>" class="btn-get-started">Masuk</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-
         </div>
     </header><!-- End Header -->
 
@@ -71,7 +67,7 @@
                     <h1>Siap Pemilwa</h1>
                     <h2>Siap Pemilwa membuka ruang untuk pemilihan presma & wakil presma yang efisien dan transparan.</h2>
                     <div class="d-flex">
-                        <a href="<?= base_url('masuk'); ?>" target="_blank" class="btn-get-started">Mulai Memilih</a>
+                        <a href="<?= base_url('masuk'); ?>" class="btn-get-started">Mulai Memilih</a>
                         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Nontoh Cara Memilih</span></a>
                     </div>
                 </div>
