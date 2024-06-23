@@ -1,6 +1,6 @@
-# pemilwa_amk
+# siap_pemilwa
 
-Pemilwa Amikom: Membantu demokrasi kampus dengan aplikasi web untuk pemilihan wakil mahasiswa, mendorong partisipasi aktif dan transparansi.
+Siap Pemilwa: Membantu demokrasi kampus dengan aplikasi web untuk pemilihan wakil mahasiswa, mendorong partisipasi aktif dan transparansi.
 
 # Server Requierment
 
@@ -10,7 +10,7 @@ Server Version 10.4.27-MariaDB
 
 # Installation
 
-- ekstrak file pemilwa_amk ke dalam folder htdocs
+- ekstrak file siap_pemilwa ke dalam folder htdocs
 - buat database baru dengan nama **db_pemilwa**
 - import file **db_pemilwa.sql** ke database pemilwa yang sudah dibuat tadi
 - **localhost/pemilwa_amk/admin/masuk** untuk login ke dalam panel admin
@@ -25,7 +25,7 @@ Server Version 10.4.27-MariaDB
 **Administrator**
 
 ```
-localhost/pemilwa_amk/admin
+localhost/siap_pemilwa/admin/masuk
 Username: admin / haikal
 Password: admin / haikal
 ```
@@ -33,7 +33,7 @@ Password: admin / haikal
 **User Pemilih**
 
 ```
-localhost/pemilwa_amk
+localhost/siap_pemilwa/masuk
 Username: [nim]
 Password: user
 ```
