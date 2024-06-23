@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tambah Pengumuman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
@@ -41,7 +42,7 @@
 
                         <div class="form-group">
                             <label for="isi">Isi</label>
-                            <textarea class="form-control" id="isi" name="isi"><?php echo set_value('isi'); ?></textarea>
+                            <textarea class="form-control" id="isi" name="isi" rows="5"><?php echo set_value('isi'); ?></textarea>
                         </div>
 
                         <div class="form-group">
@@ -49,7 +50,9 @@
                             <input type="file" class="form-control-file" id="gambar" name="gambar">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Tambah</button>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                        </div>
 
                         <?php echo form_close(); ?>
                     </div>
@@ -58,5 +61,8 @@
         </div>
     </main>
     <?php $this->load->view('./admin/_partials/bottom'); ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
