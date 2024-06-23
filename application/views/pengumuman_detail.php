@@ -30,7 +30,7 @@
         <div class="tile">
             <div class="tile-body">
                 <div class="pengumuman-detail">
-                    <p><strong>Tanggal:</strong> <?= $pengumuman->tanggal_posting; ?></p>
+                    <p><strong>Update:</strong> <?= $pengumuman->tanggal_posting; ?></p>
                     <h2><?= $pengumuman->judul; ?></h2>
                     <br>
                     <?php if (!empty($pengumuman->gambar)) : ?>

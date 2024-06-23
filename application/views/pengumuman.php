@@ -55,8 +55,8 @@
                                 <?php endif; ?>
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $p->judul; ?></h5>
-                                    <p class="card-text"><?= substr($p->isi, 0, 250); ?>...</p>
-                                    <a href="<?= base_url('pengumuman/detail/' . $p->id); ?>" class="btn btn-primary mt-2">Selengkapnya</a>
+                                    <p class="card-text"><?= substr($p->isi, 0, 250); ?> ...</p>
+                                    <a href="<?= base_url('pengumuman/detail/' . $p->id); ?>" class="stretched-link">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
