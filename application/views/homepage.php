@@ -301,8 +301,8 @@
                                     <?php endif; ?>
                                     <div class="card-body">
                                         <h5 class="card-title"><?= $p->judul; ?></h5>
-                                        <p class="card-text"><?= substr($p->isi, 0, 250); ?>...</p>
-                                        <a href="<?= base_url('pengumuman/detail/' . $p->id); ?>">Selengkapnya</a>
+                                        <p class="card-text"><?= substr($p->isi, 0, 200); ?>...</p>
+                                        <a href="<?= base_url('pengumuman/detail/' . $p->id . '?from_homepage=true'); ?>" class="stretched-link">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
