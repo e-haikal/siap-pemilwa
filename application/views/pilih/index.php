@@ -43,8 +43,8 @@
                         <div class="card-body">
                             <h5 class="card-title text-center"><?= $data->nama_kandidat; ?></h5>
                             <img src="<?= base_url('gambar/' . $data->foto_kandidat); ?>" style="height: 250px; width: 250px;" class="rounded mx-auto d-block" alt="...">
-                            <a href="<?= base_url('utama/simpan/' . $data->id_kandidat); ?>" class="btn btn-info btn-block mt-3">Pilih</a>
-                        </div>
+                            <a href="<?= base_url('utama/simpan/' . $data->id_kandidat); ?>" class="btn btn-info btn-block mt-3" onclick="return confirm('Apakah Anda yakin ingin memilih?')">Pilih</a>
+                            </div>
                     </div>
                 </div>
             <?php endforeach; ?>
