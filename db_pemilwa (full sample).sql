@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Dec 20, 2023 at 12:50 AM
--- Server version: 10.6.16-MariaDB-cll-lve
--- PHP Version: 8.1.25
+-- Host: 127.0.0.1
+-- Generation Time: Jun 24, 2024 at 01:30 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u1704798_db_pemilwa`
+-- Database: `db_pemilwa`
 --
 
 -- --------------------------------------------------------
@@ -31,16 +31,17 @@ CREATE TABLE `kandidat` (
   `id_kandidat` int(11) NOT NULL,
   `nama_kandidat` varchar(120) DEFAULT NULL,
   `nomor_kandidat` varchar(10) DEFAULT NULL,
-  `foto_kandidat` text DEFAULT NULL
+  `foto_kandidat` text DEFAULT NULL,
+  `visi_misi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kandidat`
 --
 
-INSERT INTO `kandidat` (`id_kandidat`, `nama_kandidat`, `nomor_kandidat`, `foto_kandidat`) VALUES
-(1, 'Farista - Panji', '1', 'kandidat-1.png'),
-(2, 'Billy - Guntur', '2', 'kandidat-2.png');
+INSERT INTO `kandidat` (`id_kandidat`, `nama_kandidat`, `nomor_kandidat`, `foto_kandidat`, `visi_misi`) VALUES
+(1, 'Farista Nur Fazri Yuni & Panji Revolusioner Saputra', '1', 'kandidat-1.png', '<h2>Visi</h2>\r\n<p>Menjadikan BEM KM Universitas AMIKOM Yogyakarta yang berintegritas, transformatif dan inovatif, sebagai wadah pengembangan diri seluruh Mahasiswa Universitas AMIKOM Yogyakarta dalam mengenal politik kampus.</p>\r\n\r\n<h2>Misi</h2>\r\n<ol>\r\n  <li>Optimalisasi peran BEM KM Universitas AMIKOM Yogyakarta terhadap Unit Kegiatan Mahasiswa dan Badan Semi Otonom lewat pemahaman terhadap birokrasi kampus.</li>\r\n  <li>Menjadikan advokasi sebagai garda terdepan BEM KM Universitas AMIKOM Yogyakarta dalam menampung aspirasi mahasiswa.</li>\r\n  <li>Bekerjasama dengan lembaga kampus dalam mencegah dan menuntaskan kasus kekerasan seksual.</li>\r\n  <li>Berkoordinasi dengan seluruh organisasi yang ada di Universitas AMIKOM Yogyakarta demi terciptanya sinergitas.</li>\r\n</ol>\r\n\r\n<p>Sumber: Instagram / @pemilwaamikom\r\n'),
+(2, 'Billy Silalahi & Guntur Ardani Putra', '2', 'kandidat-2.png', '<h2>Visi</h2>\r\n<p>Mewujudkan LM Universitas AMIKOM Yogyakarta serta mahasiswa yang berdaya saing bersama untuk memberikan kontribusi nyata. #RuangCita Untuk AMIKOM dan INDONESIA</p>\r\n\r\n<h2>Misi</h2>\r\n<ol>\r\n  <li>#RuangCita BEM KM AMIKOM sebagai sahabat karib untuk memaksimalkan pelayanan dan aktivitas yang berkaitan dengan civitas akademika.</li>\r\n  <li>#RuangCita BEM KM AMIKOM sebagai katalisator untuk menciptakan ekosistem kinerja yang efektif seiring perkembangan zaman dalam lingkungan LM Universitas AMIKOM Yogyakarta.</li>\r\n  <li>#RuangCita BEM KM AMIKOM untuk turut hadir sebagai instrumen pergerakan mahasiswa dalam memperjuangkan sosial politik demi kesejahteraan mahasiswa maupun masyarakat.</li>\r\n  <li>#RuangCita BEM KM AMIKOM untuk menjadi mitra pembangunan sumber daya manusia Indonesia yang unggul.</li>\r\n</ol>\r\n<p>Sumber: Instagram / @pemilwaamikom');
 
 -- --------------------------------------------------------
 
@@ -59,16 +60,15 @@ CREATE TABLE `pemilih` (
 --
 -- Dumping data for table `pemilih`
 --
-
+-- password = user
 INSERT INTO `pemilih` (`id_pemilih`, `nama_pemilih`, `jk_pemilih`, `username`, `password`) VALUES
-(1, 'Ade Febrian', 'Laki-Laki', '20.11.3793', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(1, 'Ade Febriani', 'Laki-Laki', '20.11.3793', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (2, 'Anas Fikri Hanif', 'Laki-Laki', '20.11.3743', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (3, 'Andi Muhammad Ichsan Jalaluddin', 'Laki-Laki', '20.83.0545', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (4, 'Arifin Yunianta', 'Laki-Laki', '20.11.3763', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (5, 'Dian Prasetya', 'Laki-Laki', '21.83.0712', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (6, 'Dimas Fajar Nugroho', 'Laki-Laki', '20.11.3398', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (7, 'Eldiva Tegar Imananda', 'Laki-Laki', '20.83.0474', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(8, 'Ema Devani Putri', 'Perempuan', '20.11.3663', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (9, 'Indra Bagas Pratama', 'Laki-Laki', '22.83.0859', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (10, 'Jhingga Mahadhni', 'Laki-Laki', '21.83.0742', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (11, 'Ken Diani Mutia Sari', 'Perempuan', '20.11.3736', 'ee11cbb19052e40b07aac0ca060c23ee'),
@@ -129,7 +129,6 @@ INSERT INTO `pemilih` (`id_pemilih`, `nama_pemilih`, `jk_pemilih`, `username`, `
 (66, 'Ahmad Almachzumi Rais Rasyiid', 'Laki-Laki', '21.12.2121', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (67, 'Ahmad Faqih Hidayat', 'Laki-Laki', '20.11.3603', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (68, 'Alfian Nur Hidayat', 'Laki-Laki', '20.02.0578', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(69, 'Asman Haikal', 'Laki-Laki', '23.22.2510', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (70, 'Candra Zofariansyah', 'Laki-Laki', '20.62.0164', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (71, 'Dava Akbar Maulana', 'Laki-Laki', '21.12.1998', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (72, 'David Diamanta', 'Laki-Laki', '20.12.1540', 'ee11cbb19052e40b07aac0ca060c23ee'),
@@ -216,7 +215,6 @@ INSERT INTO `pemilih` (`id_pemilih`, `nama_pemilih`, `jk_pemilih`, `username`, `
 (153, 'RAHARDYANDRA NAUFAL EFFENDY PRATAMA', 'Laki-Laki', '23.22.2514', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (154, 'ALFINA NUR HALIZA', 'Perempuan', '23.22.2517', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (155, 'ALICA MARSA MALIHAH WIDIGDO', 'Perempuan', '23.22.2524', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(156, 'FAUZI IKHSAN NOVANTO', 'Laki-Laki', '23.22.2525', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (157, 'ABIDAH RAHMI', 'Perempuan', '22.12.2682', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (158, 'Wahyu Adi Giantoro', 'Laki-Laki', '22.12.2712', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (159, 'ADI NUGROHO', 'Laki-Laki', '22.12.2710', 'ee11cbb19052e40b07aac0ca060c23ee'),
@@ -249,14 +247,41 @@ INSERT INTO `pemilih` (`id_pemilih`, `nama_pemilih`, `jk_pemilih`, `username`, `
 (186, 'WAKHID PRAMADYA PUTRA', 'Laki-Laki', '22.12.2698', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (187, 'WIRA PRADINA RESTI', 'Laki-Laki', '22.12.2687', 'ee11cbb19052e40b07aac0ca060c23ee'),
 (188, 'ZAIDAN RAFIF SYAUQI', 'Laki-Laki', '22.12.2731', 'ee11cbb19052e40b07aac0ca060c23ee'),
-(189, 'Muhammad', 'Laki-Laki', '23.22.0001', 'ee11cbb19052e40b07aac0ca060c23ee');
+(192, 'Adi Wijaya', 'Laki-Laki', '23.22.2518', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(193, 'Anika', 'Perempuan', '23.22.2600', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(194, 'Ahmad', 'Laki-Laki', '23.22.2552', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(195, 'FAUZI IKHSAN NOVANTO', 'Laki-Laki', '23.22.2525', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(196, 'ASMAN HAIKAL', 'Laki-Laki', '23.22.2510', 'ee11cbb19052e40b07aac0ca060c23ee');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengumuman`
+--
+
+CREATE TABLE `pengumuman` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `isi` text NOT NULL,
+  `tanggal_posting` date NOT NULL,
+  `gambar` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `pengumuman`
+--
+
+INSERT INTO `pengumuman` (`id`, `judul`, `isi`, `tanggal_posting`, `gambar`) VALUES
+(24, 'Panduan Penggunaan Siap Pemilwa', '<p>Siap Pemilwa adalah platform online yang dirancang untuk memfasilitasi pemilihan Presiden dan Wakil Presiden Mahasiswa (Presma & Wapresma) secara efisien dan transparan. Panduan ini akan menjelaskan cara menggunakan Siap Pemilwa baik sebagai pemilih (mahasiswa) maupun administrator.</p>\r\n\r\n<h2>A. Untuk Mahasiswa (Pemilih)</h2>\r\n\r\n<ol>\r\n  <li>\r\n    <b>Akses Siap Pemilwa:</b><br>\r\n    Buka browser web dan kunjungi website Siap Pemilwa di alamat berikut:\r\n    <br>\r\n    <a href=\"https://siappemilwa.tuntasdigital.com\">https://siappemilwa.tuntasdigital.com</a>\r\n  </li>\r\n  <li>\r\n    <b>Pelajari Informasi Pemilihan:</b>\r\n    <ul>\r\n      <li><b>Hero Image:</b> Informasi singkat tentang Siap Pemilwa dan tombol untuk memulai pemilihan.</li>\r\n      <li><b>Cara Memilih:</b> Panduan langkah demi langkah tentang cara memberikan suara.</li>\r\n      <li><b>Daftar Kandidat:</b> Profil singkat setiap pasangan calon Presma & Wapresma, termasuk foto dan tombol untuk melihat visi misi mereka.</li>\r\n      <li><b>Testimoni:</b> Ulasan dari mahasiswa lain yang telah menggunakan Siap Pemilwa.</li>\r\n      <li><b>Pengumuman:</b> Informasi penting terkait pemilihan.</li>\r\n      <li><b>FAQ:</b> Jawaban atas pertanyaan umum seputar Siap Pemilwa.</li>\r\n    </ul>\r\n  </li>\r\n  <li>\r\n    <b>Masuk (Login):</b><br>\r\n    Klik tombol <b>\"Mulai Memilih\"</b> dan masukkan NIM/NPM serta password akun mahasiswa Anda.\r\n  </li>\r\n  <li>\r\n    <b>Pilih Kandidat:</b><br>\r\n    Setelah masuk, Anda akan melihat daftar kandidat. Klik tombol <b>\"Pilih\"</b> pada kandidat pilihan Anda.\r\n  </li>\r\n  <li>\r\n    <b>Konfirmasi Pilihan Anda:</b><br>\r\n    Akan muncul jendela pop-up untuk konfirmasi. Klik <b>\"Ya\"</b> jika sudah yakin.\r\n  </li>\r\n  <li>\r\n    <b>Selesai:</b><br>\r\n    Setelah berhasil memilih, Anda akan menerima pesan konfirmasi. Anda dapat melihat statistik sementara hasil pemilihan di Dashboard atau keluar (logout) dari akun Anda.\r\n  </li>\r\n</ol>\r\n\r\n<h2>B. Untuk Administrator</h2>\r\n\r\n<ol>\r\n  <li>\r\n    <b>Akses Siap Pemilwa:</b><br>\r\n    Kunjungi website Siap Pemilwa dan klik tautan \"Apakah Anda Administrator? Klik di sini\" di halaman login.\r\n  </li>\r\n  <li>\r\n    <b>Masuk (Login):</b><br>\r\n    Masukkan username dan password administrator yang telah diberikan.\r\n  </li>\r\n  <li>\r\n    <b>Dashboard Administrator:</b>\r\n    <ul>\r\n      <li><b>Melihat Statistik:</b> Melihat statistik sementara hasil pemilihan.</li>\r\n      <li><b>Kelola Data:</b> Mengelola data petugas, kandidat, pemilih, dan pengumuman (membuat, membaca, memperbarui, menghapus).</li>\r\n      <li><b>Membuat Laporan:</b> Membuat laporan mengenai petugas, kandidat, status pemilih, dan hasil suara, serta mencetaknya jika diperlukan.</li>\r\n    </ul>\r\n  </li>\r\n  <li>\r\n    <b>Logout:</b><br>\r\n    Klik ikon \"Logout\" di bagian atas halaman untuk keluar dari akun administrator.\r\n  </li>\r\n</ol>\r\n\r\n<h3>Catatan Penting:</h3>\r\n\r\n<ul>\r\n  <li><b>Satu Akun, Satu Suara:</b> Setiap mahasiswa hanya dapat memilih satu kali.</li>\r\n  <li><b>Kerahasiaan:</b> Siap Pemilwa menjamin kerahasiaan pilihan Anda.</li>\r\n  <li><b>Bantuan:</b> Jika mengalami masalah, hubungi administrator Siap Pemilwa.</li>\r\n</ul>\r\n', '2024-06-24', '518186a22db549be9ef284f4a6f8c270.png'),
+(25, 'Open Beta Tester: Jadilah Pengguna Awal Siap Pemilwa dan Menangkan Hadiah Menarik!', '<p>Halo Mahasiswa/i!</p>\r\n\r\n<p>Kami dengan bangga mengumumkan kesempatan eksklusif bagi kalian untuk menjadi bagian dari pengembangan Siap Pemilwa, platform pemilihan Presma & Wapresma online terbaru. Kami mengajak kalian untuk bergabung sebagai beta tester dan memberikan masukan berharga untuk menyempurnakan Siap Pemilwa sebelum peluncuran resminya.</p>\r\n\r\n<h2>Apa yang Akan Kamu Lakukan?</h2>\r\n\r\n<p>Sebagai beta tester, kamu akan:</p>\r\n<ul>\r\n    <li><b>Menjelajahi:</b> Mencoba semua fitur Siap Pemilwa, mulai dari melihat profil kandidat hingga memberikan suara.</li>\r\n    <li><b>Memberi Masukan:</b> Mengisi formulir pengujian dan evaluasi untuk menyampaikan pendapat, saran, dan pengalamanmu menggunakan Siap Pemilwa.</li>\r\n    <li><b>Berkontribusi:</b> Membantu kami mengidentifikasi masalah, meningkatkan kinerja, dan memastikan Siap Pemilwa siap digunakan oleh seluruh mahasiswa.</li>\r\n</ul>\r\n\r\n<h2>Apa yang Akan Kamu Dapatkan?</h2>\r\n\r\n<p>Selain kesempatan untuk berkontribusi dalam pengembangan Siap Pemilwa, beta tester terpilih juga berkesempatan memenangkan hadiah menarik, seperti:</p>\r\n<ul>\r\n    <li><span class=\"highlight\">Pulsa:</span> Penuhi kebutuhan internetmu dengan voucher pulsa gratis.</li>\r\n    <li><span class=\"highlight\">Kredit:</span> Namamu akan dicantumkan sebagai kontributor dalam launching resmi Siap Pemilwa.</li>\r\n</ul>\r\n\r\n<h2>Bagaimana Cara Bergabung?</h2>\r\n\r\n<ol>\r\n    <li>Isi formulir pendaftaran beta tester di <a href=\"ungu.in/siap-pemilwa-beta\">Siap Pemilwa Beta</a> (pastikan untuk mencantumkan informasi kontak yang valid).</li>\r\n    <li>Tunggu konfirmasi dari tim Siap Pemilwa. Kami akan memilih <b>30 beta tester</b> berdasarkan kriteria tertentu.</li>\r\n    <li>Jika terpilih, kamu akan menerima email berisi instruksi lebih lanjut dan tautan ke formulir pengujian dan evaluasi.</li>\r\n</ol>\r\n\r\n<h3>Periode Beta Tester:</h3>\r\n\r\n<p>10 Juni - 10 Juli 2024</p>\r\n\r\n<p>Jangan lewatkan kesempatan ini untuk menjadi bagian dari Siap Pemilwa dan menangkan hadiah menarik! Bergabunglah sekarang dan kontribusi suara untuk masa depan pemilihan Presma & Wapresma!</p>\r\n\r\n<p>Salam,</p>\r\n<p>Tim Siap Pemilwa</p>', '2024-06-24', 'c6877db4a87ae6056e77f62a453f49ed.png'),
+(26, 'Siap Pemilwa: Revolusi Pemilihan Mahasiswa di Era Digital', '<p>Pemilihan Umum Mahasiswa (Pemilwa) merupakan momen penting dalam kehidupan kampus. Ia adalah saat di mana mahasiswa menentukan arah kepemimpinan dan masa depan kampus mereka. Namun, proses Pemilwa tradisional seringkali dihadapkan pada berbagai tantangan, mulai dari antrian panjang hingga potensi kecurangan.</p>\r\n\r\n<p><b>Siap Pemilwa</b> hadir sebagai solusi inovatif untuk mengatasi tantangan tersebut. Platform ini membawa Pemilwa ke era digital, menawarkan berbagai keunggulan yang tak tertandingi oleh sistem tradisional:</p>\r\n\r\n<h3>1. Efisiensi dan Kemudahan:</h3>\r\n\r\n<p>Lupakan antrian panjang dan kertas suara yang merepotkan. Dengan Siap Pemilwa, mahasiswa dapat memberikan suara mereka dari mana saja dan kapan saja hanya dengan beberapa klik. Proses pemilihan menjadi lebih cepat, mudah, dan nyaman.</p>\r\n\r\n<h3>2. Transparansi dan Akuntabilitas:</h3>\r\n\r\n<p>Siap Pemilwa dibangun dengan prinsip transparansi. Setiap suara tercatat secara digital dan dapat diaudit untuk memastikan keakuratan hasil pemilihan. Ini menghilangkan potensi kecurangan dan meningkatkan kepercayaan mahasiswa terhadap proses Pemilwa.</p>\r\n\r\n<h3>3. Partisipasi yang Lebih Tinggi:</h3>\r\n\r\n<p>Kemudahan akses dan kenyamanan Siap Pemilwa mendorong lebih banyak mahasiswa untuk berpartisipasi dalam Pemilwa. Hal ini menghasilkan representasi yang lebih baik dari suara mahasiswa dan legitimasi yang lebih kuat bagi pemimpin terpilih.</p>\r\n\r\n<h3>4. Ramah Lingkungan:</h3>\r\n\r\n<p>Dengan mengurangi penggunaan kertas, Siap Pemilwa berkontribusi pada upaya pelestarian lingkungan. Ini sejalan dengan nilai-nilai keberlanjutan yang semakin penting bagi generasi muda.</p>\r\n\r\n<h3>5. Fitur-fitur Canggih:</h3>\r\n\r\n<p>Siap Pemilwa tidak hanya sekadar platform voting. Ia dilengkapi dengan berbagai fitur canggih, seperti profil kandidat yang lengkap, data <i>realtime</i>, dan <i>reporting</i>. Ini menciptakan pengalaman Pemilwa yang lebih informatif dan interaktif bagi mahasiswa.</p>\r\n\r\n<p>Siap Pemilwa bukan hanya sekadar platform, tetapi juga sebuah gerakan untuk memodernisasi Pemilwa dan meningkatkan partisipasi mahasiswa dalam proses demokrasi di kampus. Dengan keunggulan dan nilai-nilai yang dibawanya, Siap Pemilwa siap menjadi standar baru dalam Pemilwa di Indonesia.</p>', '2024-06-24', '0061a130bd58d23bd17652ae815b822e.png');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `petugas`
 --
-
+-- password = tuntas
 CREATE TABLE `petugas` (
   `id_petugas` int(11) NOT NULL,
   `nama_petugas` varchar(120) DEFAULT NULL,
@@ -269,8 +294,8 @@ CREATE TABLE `petugas` (
 --
 
 INSERT INTO `petugas` (`id_petugas`, `nama_petugas`, `username`, `password`) VALUES
-(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(2, 'Haikal', 'haikal', 'a847b53f9999fc735ca2b6f1419c93d0');
+(1, 'admin', 'admin', 'd36ada70da69ba45e204aab691ebffca'),
+(14, 'haikal', 'haikal', 'd36ada70da69ba45e204aab691ebffca');
 
 -- --------------------------------------------------------
 
@@ -358,7 +383,6 @@ INSERT INTO `pilih` (`id_pilih`, `id_kandidat`, `id_pemilih`, `tgl_rekam`) VALUE
 (66, 1, 66, '2023-12-18 00:15:45'),
 (67, 2, 67, '2023-12-18 00:15:59'),
 (68, 1, 68, '2023-12-18 00:16:31'),
-(69, 2, 69, '2023-12-18 00:16:44'),
 (70, 1, 70, '2023-12-18 00:16:57'),
 (71, 1, 71, '2023-12-18 00:17:13'),
 (72, 1, 72, '2023-12-18 00:17:59'),
@@ -382,7 +406,14 @@ INSERT INTO `pilih` (`id_pilih`, `id_kandidat`, `id_pemilih`, `tgl_rekam`) VALUE
 (90, 1, 90, '2023-12-18 00:54:20'),
 (91, 1, 91, '2023-12-18 00:58:05'),
 (92, 1, 92, '2023-12-18 00:58:16'),
-(93, 1, 93, '2023-12-18 14:55:30');
+(93, 1, 93, '2023-12-18 14:55:30'),
+(94, 1, 94, '2023-12-20 08:26:33'),
+(95, 1, 95, '2023-12-20 08:41:55'),
+(97, 2, 96, '2024-06-18 07:45:21'),
+(98, 2, 97, '2024-06-18 21:50:23'),
+(99, 2, 194, '2024-06-21 18:07:02'),
+(100, 27, 69, '2024-06-21 19:55:27'),
+(101, 2, 156, '2024-06-23 21:58:48');
 
 --
 -- Indexes for dumped tables
@@ -399,6 +430,12 @@ ALTER TABLE `kandidat`
 --
 ALTER TABLE `pemilih`
   ADD PRIMARY KEY (`id_pemilih`);
+
+--
+-- Indexes for table `pengumuman`
+--
+ALTER TABLE `pengumuman`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `petugas`
@@ -422,36 +459,31 @@ ALTER TABLE `pilih`
 -- AUTO_INCREMENT for table `kandidat`
 --
 ALTER TABLE `kandidat`
-  MODIFY `id_kandidat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_kandidat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `pemilih`
 --
 ALTER TABLE `pemilih`
-  MODIFY `id_pemilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
+  MODIFY `id_pemilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
+
+--
+-- AUTO_INCREMENT for table `pengumuman`
+--
+ALTER TABLE `pengumuman`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `pilih`
 --
 ALTER TABLE `pilih`
-  MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `pilih`
---
-ALTER TABLE `pilih`
-  ADD CONSTRAINT `fk_pilih_kandidat` FOREIGN KEY (`id_kandidat`) REFERENCES `kandidat` (`id_kandidat`),
-  ADD CONSTRAINT `fk_pilih_pemilih` FOREIGN KEY (`id_pemilih`) REFERENCES `pemilih` (`id_pemilih`);
+  MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

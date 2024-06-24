@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2023 at 02:57 AM
+-- Generation Time: Jun 24, 2024 at 01:30 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -31,7 +31,8 @@ CREATE TABLE `kandidat` (
   `id_kandidat` int(11) NOT NULL,
   `nama_kandidat` varchar(120) DEFAULT NULL,
   `nomor_kandidat` varchar(10) DEFAULT NULL,
-  `foto_kandidat` text DEFAULT NULL
+  `foto_kandidat` text DEFAULT NULL,
+  `visi_misi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -47,6 +48,20 @@ CREATE TABLE `pemilih` (
   `username` varchar(100) DEFAULT NULL,
   `password` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengumuman`
+--
+
+CREATE TABLE `pengumuman` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `isi` text NOT NULL,
+  `tanggal_posting` date NOT NULL,
+  `gambar` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -91,6 +106,12 @@ ALTER TABLE `pemilih`
   ADD PRIMARY KEY (`id_pemilih`);
 
 --
+-- Indexes for table `pengumuman`
+--
+ALTER TABLE `pengumuman`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `petugas`
 --
 ALTER TABLE `petugas`
@@ -121,6 +142,12 @@ ALTER TABLE `pemilih`
   MODIFY `id_pemilih` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `pengumuman`
+--
+ALTER TABLE `pengumuman`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
@@ -131,17 +158,6 @@ ALTER TABLE `petugas`
 --
 ALTER TABLE `pilih`
   MODIFY `id_pilih` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `pilih`
---
-ALTER TABLE `pilih`
-  ADD CONSTRAINT `fk_pilih_kandidat` FOREIGN KEY (`id_kandidat`) REFERENCES `kandidat` (`id_kandidat`),
-  ADD CONSTRAINT `fk_pilih_pemilih` FOREIGN KEY (`id_pemilih`) REFERENCES `pemilih` (`id_pemilih`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
