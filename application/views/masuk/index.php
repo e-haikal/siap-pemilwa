@@ -39,20 +39,6 @@
             box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
         }
 
-        .wrapper p a {
-            font-size: inherit;
-            /* Menggunakan ukuran font yang sama dengan elemen induk (p) */
-            color: #4A5AEC;
-            /* Warna teks */
-            text-decoration: none;
-            /* Menghilangkan garis bawah */
-        }
-
-        .wrapper p a:hover {
-            color: #039BE5;
-            /* Warna teks saat di-hover */
-        }
-
         .logo {
             width: 80px;
             margin: auto;
@@ -86,6 +72,11 @@
             font-size: 1.2rem;
             color: #666;
             padding: 10px 15px 10px 10px;
+        }
+
+        .wrapper .form-field input:focus {
+            outline: none;
+            box-shadow: none;
         }
 
         .wrapper .form-field {
@@ -122,6 +113,16 @@
         }
 
         .wrapper a:hover {
+            color: #039BE5;
+        }
+
+        .wrapper p a {
+            font-size: inherit;
+            color: #4A5AEC;
+            text-decoration: none;
+        }
+
+        .wrapper p a:hover {
             color: #039BE5;
         }
 
