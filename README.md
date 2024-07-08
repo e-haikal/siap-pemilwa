@@ -13,7 +13,7 @@ Server Version 10.4.27-MariaDB
 - ekstrak file siap_pemilwa ke dalam folder htdocs
 - buat database baru dengan nama **db_pemilwa**
 - import file **db_pemilwa.sql** ke database pemilwa yang sudah dibuat tadi
-- **localhost/pemilwa_amk/admin/masuk** untuk login ke dalam panel admin
+- **localhost/siap_pemilwa/admin/masuk** untuk login ke dalam panel admin
 
 # Setting Database
 
