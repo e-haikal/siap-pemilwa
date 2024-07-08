@@ -27,7 +27,7 @@ Server Version 10.4.27-MariaDB
 ```
 localhost/siap_pemilwa/admin/masuk
 Username: admin / haikal
-Password: admin / haikal
+Password: tuntas / haikal
 ```
 
 **User Pemilih**
