@@ -46,7 +46,7 @@ Berikut adalah sebagian tampilan halaman web.
 
 | Gambar                                     | Deskripsi                         |
 | ------------------------------------------ | --------------------------------- |
-| ![Login Admin](https://github.com/e-haikal/web-pemilihan-mahasiswa/raw/main/gambar/screenshot/login-admin.png)        | Login Admin                       |
+| ![Login Admin](https://github.com/e-haikal/siap-pemilwa/raw/main/gambar/screenshot/login-admin.png)        | Login Admin                       |
 | ![Login User](https://github.com/e-haikal/web-pemilihan-mahasiswa/raw/main/gambar/screenshot/login-user.png)          | Login User                        |
 | ![User Dashboard Utama](https://github.com/e-haikal/web-pemilihan-mahasiswa/raw/main/gambar/screenshot/user-dashboard-utama.png) | User Dashboard Utama       |
 | ![User Dashboard Pilih](https://github.com/e-haikal/web-pemilihan-mahasiswa/raw/main/gambar/screenshot/user-dashboard-pilih.png) | User Dashboard Pilih       |
