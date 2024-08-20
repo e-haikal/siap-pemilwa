@@ -41,9 +41,6 @@ Password: user
 # Tampilan
 Berikut adalah sebagian tampilan halaman web.
 
-# Tampilan
-Berikut adalah sebagian tampilan halaman web.
-
 | Gambar                                     | Deskripsi                         |
 | ------------------------------------------ | --------------------------------- |
 | ![Login Admin](https://github.com/e-haikal/siap-pemilwa/raw/main/gambar/screenshot/login-admin.png)        | Login Admin                       |
